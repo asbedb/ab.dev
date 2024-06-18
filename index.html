@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> asbedb.dev/</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💾</text></svg>">
+        <link rel="stylesheet" href="css/style.css"> 
+        <script src="https://cdn.babylonjs.com/babylon.js"></script>
+        <script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+        <script src="https://code.jquery.com/pep/0.4.3/pep.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    <body>
+        <container class="main-bg">
+            <container class="sidebar-left">
+                <div><a href="https://github.com/asbedb/" target="_blank"><img src="img/git.png" class="sidebar-image"/></a></div>
+                <div><a href="https://www.linkedin.com/in/asbed/" target="_blank"><img src="img/li.webp" class="sidebar-image"/></a></div>
+                <div><a href="https://medium.com/@asbedb" target="_blank"><img src="img/medium.webp" class="sidebar-image"/></a></div>
+                <div><a href="https://www.x.com/asbedb/" target="_blank"><img src="img/x.png" class="sidebar-image"/></a></div>
+            </container>
+            <div class="main-grid">
+                <div class="top-bar">
+                    <h1>asbedb.dev/<canvas id="renderCanvas" class="render"></canvas></h1>
+                </div>
+                <div class="main-con">
+                    <container id="top-message">
+                        <div class="content-username">
+                            <div><img src="img/pfp.jpg" class="username-pfp"/></div>
+                            <div>
+                                asbedb <a class="date">11:28am 17/06/2024</a><br>
+                                <a class="message-text"> <h1>Hello There! 👋</h1>
+                                <h3>I'm Asbed. <br><br>
+                                🚀 Based in Melbourne, Australia 🚀<br><br>
+                                In 2024 after a long and successfull career in Information Technology, I made a decision to reinvigorate my technical knowledge and start working on my true passion.
+                                <br> <br>Coding!<br><br> 
+                                Here you will find some projects and information on my development journey and how you can contact me!
+                                </h3>
+                                </a>
+                            </div>
+                        </div>
+                    </container>
+                    <container id="Showcase">
+                        <div class="content-username">
+                            <div><img src="img/pfp.jpg" class="username-pfp"/></div>
+                            <div>
+                                asbedb <a class="date">11:28am 17/06/2024</a><br>
+                                <a class="message-text"> 
+                                    <h1>Projects</h1>
+                                    <div class="message-embed">
+                                        <div>WindowsXD</div>
+                                        <div><img class="message-embed-image" src="img/wxd.png"/></div>
+                                        <div>CSS and HTML Implementation Emulating Windows XP Startup</div>
+                                    </div>
+                                    <div class="message-embed">
+                                        <div>SiteQL</div>
+                                        <div><img class="message-embed-image" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/></div>
+                                        <div>Automated GUI Based web tool for websites using MySQL</div>
+                                    </div>
+                                    <div class="message-embed">
+                                        <div>DiscPTCG</div>
+                                        <div><img class="message-embed-image" src="https://cdn-icons-png.flaticon.com/512/25/25231.png"/></div>
+                                        <div>Discord Trading Card Game Writtien with discord.py</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </container>
+                    <container id="medium-feed">
+                        <div class="content-username">
+                            <div><img src="img/pfp.jpg" class="username-pfp"/></div>
+                            <div>
+                                asbedb <a class="date">11:28am 17/06/2024</a><br>
+                                <a class="message-text"> 
+                                    <h1>Latest</h1>
+                                    <container id="rss-embed"></container>
+                                </a>
+                            </div>
+                        </div>
+                    </container>
+                    <container id="Study">
+                        <div class="content-username">
+                            <div><img src="img/pfp.jpg" class="username-pfp"/></div>
+                            <div>
+                                asbedb <a class="date">11:28am 17/06/2024</a><br>
+                                <a class="message-text"> 
+                                    <h1>Languages</h1>
+                                        <li>JavaScript</li>
+                                        <li>SQL</li>
+                                        <li>Python</li>
+                                        <li>PHP</li>
+                                        <li>HTML/CSS</li>
+                                    <h1>Study</h1>
+                                        <li>Harvard CS50 (2024)</li>
+                                        <li>Various Industry Certifications-[Microsoft and Google] (2020-2024)</li>
+                                        <li>CCNA (2009)</li>
+                                </a>
+                            </div>
+                        </div>
+                    </container>
+                    <container id="career">
+                        <div class="content-username">
+                            <div><img src="img/pfp.jpg" class="username-pfp"/></div>
+                            <div>
+                                asbedb <a class="date">11:28am 17/06/2024</a><br>
+                                <a class="message-text"> 
+                                    <h1>Career</h1>
+                                    <h2 style="color: blueviolet;"><b>**Currently Studying and Contracting**</b></h2>
+                                    <img src="img/lenovo_logo.jpeg" class="message-logo"/>
+                                    <h2 style="color: lightcoral;">Lenovo</h2> 
+                                    <h2>Multiple Roles (Sales Leader/Manager, Account Executive and Technical Advocate)</h2>
+                                    <h3><strong style="color: lightcoral;">8 Years: </strong>September 2015 - February 2019, August 2020 - June 2024</h3>
+                                    As an experienced professional in sales and services management at Lenovo, I specialized in catering to the distinct needs of government, education, and enterprise sectors. 
+                                    <br><br>Leading teams and fostering innovation, I develop tailored technology solutions and nurture client relationships to drive business success. Whether strategizing service delivery or growing key accounts, I prioritize customer satisfaction and continuous improvement to exceed expectations and deliver exceptional value.
+                                    <br><br>
+                                    <img src="img/ct.png" class="message-logo"/>
+                                    <h2 style="color: lightseagreen;">Comptier</h2> 
+                                    <h2>Founder</h2>
+                                    <h3><strong style="color: lightseagreen;">1 Year: </strong>February 2019 - January 2020</h3>
+                                        In February 2019, I began a new venture aimed at leveraging my business-to-business consulting experience and technical skills. Over the course of the following year, I successfully developed and sold several businesses under the Comptier PTY LTD umbrella.
+                                        <br><br>
+                                        One of these businesses was a web-based CRM designed for an overseas market, which was developed, hosted, and sold within just three months. Additionally, I established a brick-and-mortar retail store in Melbourne catering to fine food, which also included an online sales component. This online portion of the business achieved a return on investment of 125%.
+                                    <br><br>
+                                    <img src="img/dell.jpeg" class="message-logo"/>
+                                    <h2 style="color: lightskyblue;">Dell</h2> 
+                                    <h2>Multiple Roles (Preferred Accounts Manager and End User Computing BDM)</h2>
+                                    <h3><strong style="color: lightskyblue;">4 Years: </strong>April 2011 - September 2015</h3>
+                                    During my four-year tenure at Dell Australia New Zealand, I held the roles of Preferred Accounts Manager and End User Computing Business Development Manager. 
+                                    <br><br>As a Preferred Accounts Manager, I exceeded sales targets through strategic client relationship management, earning recognition for exceptional service and fostering long-term partnerships. Transitioning into the role of End User Computing Business Development Manager, I spearheaded initiatives to drive business growth and market penetration, collaborating closely with cross-functional teams to capitalize on emerging trends and technological advancements. My contributions played a pivotal role in expanding Dell's footprint in the region's competitive landscape, resulting in increased market share and brand visibility.
+                                    <br><br>
+                                </a>
+                            </div>
+                        </div>
+                    </container>
+                    <container id="end">
+                        <div class="content-username">
+                            <div><img src="img/pfp.jpg" class="username-pfp"/></div>
+                            <div>
+                                asbedb <a class="date">11:28am 17/06/2024</a><br>
+                                <a class="message-text"> 
+                                    <iframe src="https://giphy.com/embed/bGgsc5mWoryfgKBx1u" width="300" height="300" style="border-radius: 5px;" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="content-pin">
+                            <div style="padding-left: 25px;"><hr></div>
+                            <div class="text-pin"><a style="color: var(--custom-purple);">asbedb</a> 2024</div>
+                            <div style="padding-right: 25px;"><hr></div>
+                        </div>
+                    </container>
+                </div>
+            </div> 
+        <script src="js/main.js"></script>
+    </body>
+</html>
