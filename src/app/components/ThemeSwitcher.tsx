@@ -23,12 +23,12 @@ export default function ThemeSwitcher() {
                     <DropdownTrigger>
                         <Button
                             disableRipple
-                            className="p-5 bg-transparent data-[hover=true]:bg-transparent text-3xl text-primary-foreground"
+                            className="p-5 bg-transparent data-[hover=true]:bg-transparent text-3xl"
                             endContent="\/"
-                            radius="sm"
+                            radius="lg"
                             variant="light"
                         >
-                            <FaPaintbrush/>
+                            <FaPaintbrush className="text-primary-50"/>
                         </Button>
                     </DropdownTrigger>
                 </NavbarItem>

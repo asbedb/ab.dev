@@ -17,16 +17,15 @@ import NavMenuLinks from "./NavMenuLinks";
 export default function NavBar(){
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     return (
-            <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-primary-50 text-primary-foreground p-2"> 
+            <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-primary-700 p-2"> 
                 <NavbarContent className="sm:flex gap-5" justify="center">
                 <NavbarMenuToggle
                             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                            className="md:hidden"
+                            className="md:hidden text-primary-50 ml-5"
                         />
                     <NavbarBrand>
                         <SiteBrand/>
                     </NavbarBrand>
-
                         <NavMenuLinks/>
                         <NavLinks/>
                         <NavbarItem>

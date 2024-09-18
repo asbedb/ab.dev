@@ -23,7 +23,7 @@ export default function NavMenuLinks(){
             <NavbarMenu className="md:hidden p-5">
             {navItems.map((item) => (
                 <NavbarMenuItem  key={item.name} className="">
-                    <Link key={item.name} href={item.href} className="w-full text-xl text-primary-800">
+                    <Link key={item.name} href={item.href} className="w-full text-xl text-primary-50">
                         {item.name}
                     </Link>
                 </NavbarMenuItem>

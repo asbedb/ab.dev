@@ -15,24 +15,39 @@ const config: Config = {
   plugins: [nextui({
     themes:{
       /*Color Options Primary, Secondary, Success, Warning, Danger*/
+      /*50 Lightest 900 darkest*/
       light:{
         layout:{},
         colors:{
           background: '#f4f4f5',
           foreground: `#18181b`,
           primary:{            
-            900: '#cce4f5',
-            800: '#b3d8f1',
-            700: '#99cceb',
-            600: '#80bfe6',
-            500: '#66b3e0',
-            400: '#4da7db',
-            300: '#338ad5',
-            200: '#2974bf',
-            100: '#235ea1',
-            50: '#1b487d',
-            DEFAULT: '#2986cc',
-            foreground: '#FFFFFF'
+            900: '#0f1118',
+            800: '#1e222f',
+            700: '#2d3247',
+            600: '#3c435e',
+            500: '#4b5476',
+            400: '#5a658e',
+            300: '#6976a5',
+            200: '#7886bd',
+            100: '#8797d4',
+            50: '#96a8ec',
+            DEFAULT: '#96a8ec',
+            foreground: '#0f1118'
+          },
+          secondary:{
+            900: '#18160f',
+            800: '#2f2c1e',
+            700: '#47412d',
+            600: '#5e573c',
+            500: '#766d4b',
+            400: '#8e835a',
+            300: '#a59969',
+            200: '#bdae78',
+            100: '#d4c487',
+            50: '#ecda96',
+            DEFAULT: '#ecda96',
+            foreground: '#18160f'
           }
         }
       },
@@ -42,18 +57,32 @@ const config: Config = {
           background:'#40444b',
           foreground: '#d0c9c9',
           primary: {
-            900: '#c9c9ca',
-            800: '#b0b0b1',
-            700: '#979798',
-            600: '#7e7e7f',
-            500: '#656566',
-            400: '#4c4d4e',
-            300: '#424345',
-            200: '#37393b',
-            100: '#2d2e30',
-            50: '#202225',
-            DEFAULT: '#40444b',
-            foreground: '#d0c9c9'
+            900: '#170b19',
+            800: '#2e1732',
+            700: '#46224b',
+            600: '#5d2d64',
+            500: '#74397d',
+            400: '#8b4496',
+            300: '#a24faf',
+            200: '#ba5ac8',
+            100: '#d166e1',
+            50: '#e871fa',
+            DEFAULT: '#e871fa',
+            foreground: '#170b19'
+          },
+          secondary: {
+            900: '#0e0b19',
+            800: '#1c1632',
+            700: '#2b224b',
+            600: '#392d64',
+            500: '#47387d',
+            400: '#554396',
+            300: '#634eaf',
+            200: '#725ac8',
+            100: '#8065e1',
+            50: '#8e70fa',
+            DEFAULT: '#8e70fa',
+            foreground: '#0e0b19'
           }
         }
       },
