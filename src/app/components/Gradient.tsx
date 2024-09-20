@@ -7,7 +7,7 @@ export default function Gradient(
             <span className="
                 text-center
                 font-extrabold 
-                bg-gradient-to-b from-primary-100 to-primary-500 
+                bg-gradient-to-b from-secondary-100 to-secondary-400 
                 bg-clip-text text-transparent">
                     {children}
             </span>

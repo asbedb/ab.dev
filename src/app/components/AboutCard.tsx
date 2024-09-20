@@ -9,7 +9,7 @@ export default function AboutCard(){
         <>
             <div className="flex h-full">
                 <div className="mx-auto p-4 md:p-5">
-                <Card className="max-w-sm md:max-w-2xl bg-secondary-50 text-secondary-foreground">
+                <Card className="max-w-2xl md:max-w-5xl bg-primary-100 text-primary-foreground">
                     <CardHeader className="justify-between p-9">
                         <div className="flex gap-3">
                             <Avatar isBordered radius="full" className="
@@ -25,7 +25,7 @@ export default function AboutCard(){
                                     md:text-7xl
                                     font-bold 
                                     leading-none 
-                                    text-secondary-foreground
+                                    text-primary-foreground
                                     ">
                                         Hello!👋
                                 </h4>
@@ -33,21 +33,20 @@ export default function AboutCard(){
                                     text-4xl
                                     md:text-6xl
                                     font-bold 
-                                    leading-snug 
-                                    text-secondary-800">
+                                    leading-snug ">
                                         I{`'`}m 
                                         <Gradient>
                                         &nbsp;Asbed
                                         </Gradient>
                                 </h3>
-                                <h5 className="text-xl font-semibold tracking-tight text-primary-600">@asbedb</h5>
+                                <h5 className="text-xl font-semibold tracking-tight">@asbedb</h5>
                             </div>
                         </div>
                     </CardHeader>
                     <CardBody className="px-3 py-2 text-lg">
                         <p>
                         With over 15 years experience working for world leading technology providers.
-                        <br/><br/>I have a great story to tell!<br/><br/>
+                        <br/><br/><strong>I have a great story to tell!</strong><br/><br/>
                         My experience in the sales, technical and management spaces has lead to me driving a unique perspective in consulting with stakeholders alongside leading teams to achieve amazing things!
                         </p>
                     </CardBody>

@@ -1,5 +1,3 @@
-'use client'
-
 import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import {NavbarItem, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu} from "@nextui-org/react";
@@ -28,13 +26,13 @@ export default function ThemeSwitcher() {
                             radius="lg"
                             variant="light"
                         >
-                            <FaPaintbrush className="text-primary-50"/>
+                            <FaPaintbrush className="text-secondary-50"/>
                         </Button>
                     </DropdownTrigger>
                 </NavbarItem>
                 <DropdownMenu
                     aria-label="Themes"
-                    className="w-[340px]"
+                    className="w-[340px] text-secondary-50"
                     itemClasses={{
                     base: "gap-4",
                     }}
@@ -56,12 +54,20 @@ export default function ThemeSwitcher() {
                         Light Mode
                     </DropdownItem>
                     <DropdownItem
-                    key="Modern"
+                    key="modern"
                     description="Dark Mode Theme"
                     startContent={<FaFloppyDisk/>}
                     onClick={()=> setTheme('modern')}
                     >
                         Modern Mode
+                    </DropdownItem>
+                    <DropdownItem
+                    key="terminal"
+                    description="Terminal Mode Theme"
+                    startContent={<FaFloppyDisk/>}
+                    onClick={()=> setTheme('terminal')}
+                    >
+                        Terminal
                     </DropdownItem>
                 </DropdownMenu>
             </Dropdown>

@@ -22,7 +22,7 @@ export default function NavLinks(){
         
             <NavbarItem className="hidden md:block">
             {navItems.map((item) => (
-                <Link key={item.name} href={item.href} className="text-xl text-primary-50 p-5 hover:text-secondary">
+                <Link key={item.name} href={item.href} className="text-xl text-secondary-50 p-5 hover:text-white">
                     {item.name}
                 </Link>
                 ))}

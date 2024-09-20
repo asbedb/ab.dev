@@ -7,22 +7,22 @@ export default function SocialIcons(){
         <>
         <div className="gap-1 flex flex-row">
                 <Link href="https:/www.github.com/asbedb" target="_blank">
-                    <Button color="primary" radius="full" variant="bordered" startContent={<FaGithub className="text-3xl"/>}>
+                    <Button color="secondary" radius="full" variant="bordered" startContent={<FaGithub className="text-3xl"/>}>
                         
                     </Button>
                 </Link>
             <Link href="https://www.linkedin.com/in/asbed" target="_blank">
-                <Button color="primary" radius="full" variant="bordered" startContent={<FaLinkedin className="text-3xl"/>}>
+                <Button color="secondary" radius="full" variant="bordered" startContent={<FaLinkedin className="text-3xl"/>}>
                     
                 </Button>
             </Link>
             <Link href="https:/www.medium.com/asbedb" target="_blank">
-                <Button color="primary" radius="full" variant="bordered" startContent={<FaMedium className="text-3xl"/>}>
+                <Button color="secondary" radius="full" variant="bordered" startContent={<FaMedium className="text-3xl"/>}>
                     
                 </Button>
             </Link>
             <Link href="https:/www.twitter.com/asbedb" target="_blank">
-                <Button color="primary" radius="full" variant="bordered" startContent={<FaTwitter className="text-3xl"/>}>
+                <Button color="secondary" radius="full" variant="bordered" startContent={<FaTwitter className="text-3xl"/>}>
                     
                 </Button>
             </Link>
