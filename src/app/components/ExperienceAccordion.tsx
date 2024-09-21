@@ -6,7 +6,7 @@ export default function App() {
     return (
         <>
         <div className="flex w-full">
-                <Accordion selectionMode="multiple" className="h-full bg-primary-100 text-primary-foreground rounded-3xl">
+                <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl max-w-xl">
                     <AccordionItem
                         key="1"
                         aria-label="Lenovo"
@@ -21,9 +21,10 @@ export default function App() {
                         subtitle={<span className="text-secondary-200">Lenovo Australia and New Zealand</span>}
                         title={<span className="text-red-500">Sales Leader</span>}
                     >
-                        <strong>8 Years: September 2015 - February 2019, August 2020 - June 2024</strong><br/><br/>
-                            As an experienced professional in sales and services management at Lenovo, I specialized in catering to the distinct needs of government, education, and enterprise sectors. <br/><br/>
+                        <strong className="text-medium"><span className="text-secondary">8 Years:</span> September 2015 - June 2024</strong><br/>
+                            <p className="text-small py-2">As an experienced professional in sales and services management at Lenovo, I specialized in catering to the distinct needs of government, education, and enterprise sectors. <br/><br/>
                             Leading teams and fostering innovation, I develop tailored technology solutions and nurture client relationships to drive business success. Whether strategizing service delivery or growing key accounts, I prioritize customer satisfaction and continuous improvement to exceed expectations and deliver exceptional value.
+                            </p>
                     </AccordionItem>
                     <AccordionItem
                         key="2"
