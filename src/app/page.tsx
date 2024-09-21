@@ -1,13 +1,13 @@
 //import Image from "next/image";
 
 import NavBar from "./components/NavBar";
-import AboutCard from "./components/AboutCard"
+import BentoBox from "./components/BentoBox";
 
 export default function Home() {
   return (
     <>
       <NavBar/>
-      <AboutCard/>
+      <BentoBox/>
     </>
   );
 }
