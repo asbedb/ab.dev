@@ -1,6 +1,5 @@
 import React from "react";
 import AboutCard from "./AboutCard";
-import ExperienceAccordion from "./ExperienceAccordion";
 import GitCard from "./GitCard";
 
 export default function BentoBox(){
