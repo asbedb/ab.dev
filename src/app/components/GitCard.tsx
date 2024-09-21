@@ -1,7 +1,6 @@
 "use client"
-import { Card, CardBody, CardHeader, Spinner, Image, Avatar } from "@nextui-org/react";
+import { Card, CardBody, CardHeader, Spinner, } from "@nextui-org/react";
 import { useEffect, useState} from "react";
-import Gradient from "./Gradient";
 
 interface Git {
     name: string;
