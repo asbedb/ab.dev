@@ -5,8 +5,8 @@ export default function App() {
 
     return (
         <>
-        <div className="flex w-full">
-                <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl max-w-xl">
+        <div className="flex justify-between">
+                <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl">
                     <AccordionItem
                         key="1"
                         aria-label="Lenovo"

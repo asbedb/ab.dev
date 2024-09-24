@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Link } from "@nextui-org/react";
-import { FaGithub , FaLinkedin, FaMedium, FaSquareXTwitter, FaTwitter } from 'react-icons/fa6';
+import { FaGithub , FaLinkedin, FaMedium, FaSquareXTwitter } from 'react-icons/fa6';
 
 export default function SocialIcons(){
     return(
@@ -22,7 +22,7 @@ export default function SocialIcons(){
                 </Button>
             </Link>
             <Link href="https:/www.twitter.com/asbedb" target="_blank">
-                <Button color="secondary" radius="full" variant="bordered" startContent={<FaTwitter className="text-3xl"/>}>
+                <Button color="secondary" radius="full" variant="bordered" startContent={<FaSquareXTwitter className="text-3xl"/>}>
                     
                 </Button>
             </Link>

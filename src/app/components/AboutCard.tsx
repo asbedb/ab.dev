@@ -8,7 +8,7 @@ import ExperienceAccordion from './ExperienceAccordion';
 export default function AboutCard(){
     return(
         <>
-        <Card className="w-full h-full bg-primary-100 text-primary-foreground">
+        <Card className="w-full bg-primary-100 text-primary-foreground">
             <CardHeader className="justify-between p-9">
                 <div className="flex gap-3">
                     <Avatar isBordered radius="full" className="

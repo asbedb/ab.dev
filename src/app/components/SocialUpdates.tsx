@@ -12,7 +12,7 @@ interface Git {
 
 type FetchError = Error | null;
 
-export default function GitCard(){
+export default function SocialUpdates(){
     const [profile, setProfile] = useState<Git[]>([]);
     const [error, setError] = useState<FetchError>(null);
 
@@ -51,7 +51,7 @@ export default function GitCard(){
         <div className="flex flex-col gap-5">
             <Card className="bg-primary-100 text-primary-foreground min-w-full">
                 <CardHeader className="flex-col text-center">
-                    <h4 className="font-bold text-xl text-secondary"><Gradient>Latest Projects</Gradient></h4>
+                    <h4 className="font-bold text-xl text-secondary"><Gradient>Latest Posts</Gradient></h4>
                 </CardHeader>
             </Card>                         
                 {profile.length > 0 ? (
