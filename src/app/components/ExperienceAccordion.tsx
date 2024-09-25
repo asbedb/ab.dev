@@ -5,7 +5,7 @@ export default function App() {
 
     return (
         <>
-        <div className="flex justify-between">
+        <div className="justify-between">
                 <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl">
                     <AccordionItem
                         key="1"

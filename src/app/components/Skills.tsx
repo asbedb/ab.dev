@@ -10,7 +10,7 @@ export default function Skills(){
                 <CardHeader className="flex flex-col text-center">
                     <h4 className="font-bold text-xl text-secondary">Skills and Certifications</h4>
                 </CardHeader>
-                <CardBody className="flex text-5xl md:text-8xl text-primary-foreground text-center gap-2">
+                <CardBody className="text-5xl text-primary-foreground text-center gap-2">
                     <p className="flex flex-row gap-2 m-auto"><FaJsSquare/><FaHtml5/><FaPython/><FaMicrosoft/><FaReact/><FaNodeJs/><RiNextjsFill/></p>
                     <p className="text-2xl text-primary-foreground bg-primary-300 px-2">
                         1<br/>

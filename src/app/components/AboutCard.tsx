@@ -8,20 +8,22 @@ import ExperienceAccordion from './ExperienceAccordion';
 export default function AboutCard(){
     return(
         <>
-        <Card className="w-full bg-primary-100 text-primary-foreground">
+        <Card className="bg-primary-100 text-primary-foreground">
             <CardHeader className="justify-between p-9">
                 <div className="flex gap-3">
                     <Avatar isBordered radius="full" className="
-                        w-32
-                        h-auto 
-                        md:w-52
-                        md:h-52 
+                        flex
+                        w-auto
+                        max-w-[200px]
+                        min-w-[52px]
+                        h-auto  
                         text-large" 
                     src="/image/pfp.jpg" />
-                    <div className="flex flex-col gap-1 items-start justify-center">
+                    <div className="flex flex-col gap-2 items-start justify-center">
                         <h4 className="
+                            flex
                             text-4xl
-                            md:text-7xl
+                            sm:text-3xl
                             font-bold 
                             leading-none 
                             text-primary-foreground
@@ -30,7 +32,7 @@ export default function AboutCard(){
                         </h4>
                         <h3 className="
                             text-4xl
-                            md:text-6xl
+                            sm:text-3xl
                             font-bold 
                             leading-snug ">
                                 I{`'`}m 
