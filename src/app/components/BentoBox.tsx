@@ -17,8 +17,8 @@ export default function BentoBox(){
                 mx-auto 
                 lg:grid-flow-col 
                 lg:grid-cols-3
-                lg:px-44">
-                    <div className="px-4 w-full row-span-3 lg:col-span-1"><AboutCard/></div>
+                lg:px-56">
+                    <div className="flex h-fit px-4 row-span-3 lg:col-span-1"><AboutCard/></div>
                     <div className="flex flex-col px-4 w-full row-span-1 lg:col-span-2"><Skills/></div>
                     <div className="flex px-4 w-full row-span-2 lg:col-span-1"><GitCard/></div>
                     <div className="flex px-4 w-full row-span-2 lg:col-span-1"><SocialUpdates/></div>

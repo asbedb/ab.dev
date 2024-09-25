@@ -1,27 +1,25 @@
 "use client"
 import React from "react";
 import Gradient from "./Gradient";
-import {Card, CardHeader, CardBody, CardFooter, Avatar} from "@nextui-org/react";
+import {Card, CardHeader, CardBody, Avatar} from "@nextui-org/react";
 import SocialIcons from "./SocialIcons";
 import ExperienceAccordion from './ExperienceAccordion';
+import CodeBlock from "./CodeBlock";
 
 export default function AboutCard(){
     return(
         <>
-        <Card className="bg-primary-100 text-primary-foreground">
-            <CardHeader className="justify-between p-9">
-                <div className="flex gap-3">
-                    <Avatar isBordered radius="full" className="
+        <Card className="bg-primary-100 text-primary-foreground w-full">
+            <CardHeader className="justify-between px-4">
+                <div className="flex flex-col 2xl:flex-row gap-3">
+                    <Avatar src="/image/pfp.jpg" isBordered radius="full" className="
                         flex
                         w-auto
-                        max-w-[200px]
-                        min-w-[52px]
-                        h-auto  
-                        text-large" 
-                    src="/image/pfp.jpg" />
+                        h-auto
+                        max-h-[400px]
+                        max-w-[350px]"/>
                     <div className="flex flex-col gap-2 items-start justify-center">
                         <h4 className="
-                            flex
                             text-4xl
                             sm:text-3xl
                             font-bold 
@@ -41,15 +39,15 @@ export default function AboutCard(){
                                 </Gradient>
                         </h3>
                         <h5 className="text-xl font-semibold tracking-tight">@asbedb</h5>
+                        <strong className="text-medium">🌏 Melbourne, Australia</strong>
+                        <CodeBlock/>
                     </div>
                 </div>
             </CardHeader>
-            <CardBody className="px-3 py-2 text-lg">
+            <CardBody className="px-3 text-lg">
                     <ExperienceAccordion/>
+                    <div className="mx-auto"><SocialIcons/></div>
             </CardBody>
-            <CardFooter className="gap-3">
-                <div className="mx-auto"><SocialIcons/></div>
-            </CardFooter>
         </Card>
         </>
     )
