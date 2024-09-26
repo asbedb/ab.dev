@@ -2,6 +2,7 @@
 import { Card, CardBody, CardHeader, Spinner} from "@nextui-org/react";
 import { useEffect, useState} from "react";
 import Gradient from "./Gradient";
+import { FaGithubSquare } from "react-icons/fa";
 interface Git {
     name: string;
     html_url: string;
@@ -47,29 +48,27 @@ export default function GitCard(){
         fetchGit();
     }, []);
 
-    return(<>
-        <div className="flex flex-col gap-5">
-            <Card className="bg-primary-100 text-primary-foreground min-w-full">
-                <CardHeader className="flex-col text-center">
-                    <h4 className="font-bold text-xl text-secondary"><Gradient>Latest Projects</Gradient></h4>
-                </CardHeader>
-            </Card>                         
+    return(<>                  
                 {profile.length > 0 ? (
                     profile.map((pid, index) => (
-                        <Card key={index} className="bg-primary-100 text-primary-foreground w-full h-62">
-                            <CardHeader className="flex-col items-start">
-                                <p className="text-2xl font-bold">{pid.name}</p>
-                                <h4 className="font-bold text-xl text-secondary">{pid.language}</h4>
-                                <p className="text-sm pt-2">Last updated: {getDaysAgo(pid.updated_at)}</p>
-                            </CardHeader>
-                            <CardBody className="px-3 text-md text-foreground items-center">
-                                <p className="text-primary-foreground bg-primary-300 py-4 px-2 w-full h-full">{pid.description}</p>
-                            </CardBody>
-                        </Card>
+                        <div>
+                            <Card key={index} className="bg-primary-100 text-primary-foreground h-64">
+                                <CardHeader className="flex flex-col items-start align-middle justify-center">
+                                    <div className="text-xl font-bold flex gap-2 leading-tight">
+                                        <FaGithubSquare className="text-secondary-700"/>
+                                        {pid.name}
+                                    </div>
+                                    <h4 className="font-bold text-xl text-secondary-400">{pid.language}</h4>
+                                    <p className="text-sm pt-2">Last updated: {getDaysAgo(pid.updated_at)}</p>
+                                </CardHeader>
+                                <CardBody className="px-2 text-md text-foreground items-center bg-primary-600">
+                                    <p className="text-primary-foreground py-4 px-2 w-full h-full">{pid.description}</p>
+                                </CardBody>
+                            </Card>
+                        </div>
                     ))
                 ) : (
                     <Spinner color="secondary"/>
                 )}
-        </div>
     </>)
 }

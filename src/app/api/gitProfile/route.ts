@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 
 export async function GET() {
-    const gitHubURL = `https://api.github.com/users/asbedb/repos`;
+    const gitHubURL = `https://api.github.com/users/marco-c/repos`;
     try {
         const response = await fetch(gitHubURL);
         if (!response.ok) {
