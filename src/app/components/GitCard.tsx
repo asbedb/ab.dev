@@ -51,7 +51,6 @@ export default function GitCard(){
     return(<>                  
                 {profile.length > 0 ? (
                     profile.map((pid, index) => (
-                        <div>
                             <Card key={index} className="bg-primary-100 text-primary-foreground h-64">
                                 <CardHeader className="flex flex-col items-start align-middle justify-center">
                                     <div className="text-xl font-bold flex gap-2 leading-tight">
@@ -65,7 +64,6 @@ export default function GitCard(){
                                     <p className="text-primary-foreground py-4 px-2 w-full h-full">{pid.description}</p>
                                 </CardBody>
                             </Card>
-                        </div>
                     ))
                 ) : (
                     <Spinner color="secondary"/>
