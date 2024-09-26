@@ -14,13 +14,13 @@ export default function Skills(){
                 <CardBody className="text-primary-foreground gap-2">
                     <CodeBlock/>
                     <p className="text-2xl flex flex-row gap-2 m-auto ">
-                        <FaJsSquare className="hover:animate-pulse hover:cursor-pointer"/>
-                        <FaHtml5 className="hover:animate-pulse hover:cursor-pointer"/>
-                        <FaPython className="hover:animate-pulse hover:cursor-pointer"/>
-                        <FaMicrosoft className="hover:animate-pulse hover:cursor-pointer"/>
-                        <FaReact className="hover:animate-pulse hover:cursor-pointer"/>
-                        <FaNodeJs className="hover:animate-pulse hover:cursor-pointer"/>
-                        <RiNextjsFill className="hover:animate-pulse hover:cursor-pointer"/>
+                        <FaJsSquare className="animate-pulse"/>
+                        <FaHtml5 className="animate-pulse"/>
+                        <FaPython className="animate-pulse"/>
+                        <FaMicrosoft className="animate-pulse"/>
+                        <FaReact className="animate-pulse"/>
+                        <FaNodeJs className="animate-pulse"/>
+                        <RiNextjsFill className="animate-pulse"/>
                     </p>
                 </CardBody>
             </Card>
