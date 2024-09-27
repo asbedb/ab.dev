@@ -1,8 +1,8 @@
 import React from "react";
 import AboutCard from "./AboutCard";
-import GitCard from "./GitCard";
+import LatestPosts from "./LatestPosts";
 import Skills from "./Skills";
-import SocialUpdates from "./SocialUpdates";
+import Showcase from "./Showcase";
 import PostContainer from "./PostContainer";
 
 export default function BentoBox(){
@@ -10,17 +10,21 @@ export default function BentoBox(){
         <>
             <div className="
                 grid 
-                grid-rows-1
-                grid-cols-1
-                gap-4 
+                auto-rows-auto 
+                col-span-1
+                gap-1
                 py-4
-                xl:grid-flow-col 
-                xl:grid-cols-3
-                xl:px-32">
-                    <div className="flex h-fit px-4 row-span-3 xl:col-span-1"><AboutCard/></div>
-                    <div className="flex h-fit flex-col px-4 w-full row-span-1 xl:col-span-2"><Skills/></div>
-                    <div className="flex h-fit px-4 w-full row-span-2 col-span-1"><SocialUpdates/></div>
-                    <div className="flex h-fit px-4 w-full row-span-2 col-span-1"><PostContainer><GitCard/></PostContainer></div>
+                xl:grid-flow-col
+                xl:col-span-3
+                xl:px-72
+                ">
+                    <div className="flex h-full px-4 col-span-1 row-span-3 xl:col-start-2"><AboutCard/></div>
+                    <div className="flex h-full px-4 row-span-1 col-span-1"><Showcase/></div>
+                    <div className="flex h-full px-4 row-span-1 "><PostContainer><LatestPosts/></PostContainer></div>
+                    
+                    <div className="flex h-full px-4 xl:col-span-2 row-span-3"><Skills/></div>
+                    
+                    
             </div>
         </>
     )
