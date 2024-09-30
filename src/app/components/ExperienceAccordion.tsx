@@ -1,66 +1,64 @@
-"use client"
-import {Accordion, AccordionItem, Avatar} from "@nextui-org/react";
+"use client";
+import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
 
 export default function App() {
+    const ExperienceObject = {
+        company: ["Lenovo", "CompTier", "Dell"],
+        borderColor: ["danger", "secondary", "success"],
+        logoSource: ["/image/lenovo_logo.jpeg", "/image/ct.png", "/image/dell.jpeg"],
+        title: ["Sales Leader", "Founder and Developer", "Technical Advocate"],
+        titleColor: ["text-red-500", "text-blue-500", "text-green-500"],
+        experienceYears: ["8 Years", "5 Years", "10 Years"],
+        experienceMonths: ["September 2015 - June 2024 (Multiple Roles)", "", ""],
+        roleDescription: [
+        `   <li>Managed Business Development Managers focused on services solutions to government agencies, educational institutions, and large enterprise customers</li><br/>
+            <li>Specialised in Managed Services, Helpdesk, Cloud and Security with multiple financial disciplines including as a Service</li><br/>
+            <li>Accute focus in Microsoft Modern Management with a drive to help organisation shift to Azure Modern Management</li><br/>
+            <li>Drove growth across multiple disciplines with top line increases of up to 400% alongside average profitability of 35-40%</li>
+        `,
 
-    return (
-        <>
-        <div className="justify-between">
-                <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl">
-                    <AccordionItem
-                        key="1"
-                        aria-label="Lenovo"
-                        startContent={
-                        <Avatar
-                            isBordered
-                            color="danger"
-                            radius="lg"
-                            src="/image/lenovo_logo.jpeg"
-                        />
-                        }
-                        subtitle={<span className="text-secondary-200">Lenovo Australia and New Zealand</span>}
-                        title={<span className="text-red-500">Sales Leader</span>}
-                    >
-                        <strong className="text-medium"><span className="text-secondary">8 Years:</span> September 2015 - June 2024</strong><br/>
-                            <p className="text-small py-2">As an experienced professional in sales and services management at Lenovo, I specialized in catering to the distinct needs of government, education, and enterprise sectors. <br/><br/>
-                            Leading teams and fostering innovation, I develop tailored technology solutions and nurture client relationships to drive business success. Whether strategizing service delivery or growing key accounts, I prioritize customer satisfaction and continuous improvement to exceed expectations and deliver exceptional value.
-                            </p>
-                    </AccordionItem>
-                    <AccordionItem
-                        key="2"
-                        aria-label="CompTier"
-                        startContent={
-                        <Avatar
-                            isBordered
-                            color="secondary"
-                            radius="lg"
-                            src="/image/ct.png"
-                        />
-                        }
-                        subtitle={<span className="text-secondary-200">CompTier PTY LTD</span>}
-                        title={<span className="text-blue-500">Founder and Developer</span>}
-                    >
-                        <strong>1 Year: February 2019 - January 2020</strong><br/><br/>
-                        In February 2019, I began a new venture aimed at leveraging my business-to-business consulting experience and technical skills. Over the course of the following year, I successfully developed and sold several businesses under the Comptier PTY LTD umbrella. <br/><br/>
-                        One of these businesses was a web-based CRM designed for an overseas market, which was developed, hosted, and sold within just three months. Additionally, I established a brick-and-mortar retail store in Melbourne catering to fine food, which also included an online sales component. This online portion of the business achieved a return on investment of 125%.
-                    </AccordionItem>
-                    <AccordionItem
-                        key="3"
-                        aria-label="Zoey Lang"
-                        startContent={
-                        <Avatar
-                            isBordered
-                            color="success"
-                            radius="lg"
-                            src="/image/dell.jpeg"
-                        />
-                        }
-                        subtitle={<span className="text-secondary-200">Dell Australia</span>}
-                        title={<span className="text-green-500">Technical Advocate</span>}
-                    >
-                    </AccordionItem>
-                </Accordion>
-            </div>
-        </>
-    );
+        `   <li>Business-to-business consulting leveraging a strong established sales and technical base.</li><br/>
+            <li>Developed and sold online e-commerce platform, learning management system and content management system which utilised subscription services</li><br/>
+            <li>Also established a brick and mortar retail front in Melbourne Australia at the time specialising in fine foods</li>`,
+
+        `   <li>Spearheaded initiatives aimed at educating Enterprise, Government and Education clients seeking to understand modern technologies</li><br/>
+            <li>Lead initatives involved in virtualising environments and helped Dell secure one of the largest wins in Asia pacific for vmWare</li><br/>
+            <li>Helped expand the end user computing client footprint and drove modern practices in SCCM</li>`
+        ]
+    };
+
+return (
+    <>
+        <Accordion selectionMode="multiple" className="w-full h-full bg-primary-100 text-primary-foreground rounded-3xl">
+            {ExperienceObject.company.map((company, index) => (
+            <AccordionItem
+                key={index}
+                aria-label={company}
+                startContent={
+                <Avatar
+                    isBordered
+                    color={ExperienceObject.borderColor[index]}
+                    radius="lg"
+                    src={ExperienceObject.logoSource[index]}
+                />
+                }
+                subtitle={
+                <span className="text-secondary-200">{company}</span>
+                }
+                title={
+                <span className={ExperienceObject.titleColor[index]}>{ExperienceObject.title[index]}</span>
+                }
+            >
+                <div className="flex-shrink basis-auto h-fit">
+                    <strong className="text-large">
+                        <span className="text-secondary">{ExperienceObject.experienceYears[index]}:</span>{" "}{ExperienceObject.experienceMonths[index]}
+                    </strong>
+                    <br />
+                    <p className="text-medium py-2 text-wrap mx-8 leading-snug" dangerouslySetInnerHTML={{ __html: ExperienceObject.roleDescription[index] }}></p>
+                </div>
+            </AccordionItem>
+            ))}
+        </Accordion>
+    </>
+);
 }

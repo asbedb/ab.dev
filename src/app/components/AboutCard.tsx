@@ -15,8 +15,8 @@ export default function AboutCard(){
                             flex
                             w-auto
                             h-auto
-                            max-w-[550px]
-                            max-h-[550px]
+                            max-w-[250px]
+                            max-h-[250px]
                             min-w-[200px]
                             min-h-[50px]"/>
                     <div className="flex flex-col w-full items-left gap-1 p-4">
@@ -38,7 +38,8 @@ export default function AboutCard(){
                                 </Gradient>
                         </h3>
                         <h5 className="text-xl font-semibold tracking-tight">@asbedb</h5>
-                        <strong className="text-medium">🌏 Melbourne, Australia</strong>
+                        <strong className="text-medium">🌏 Melbourne, Australia</strong><br/>
+                        <h6 className="text-lg leading-loose px-2 bg-success-100 rounded-xl text-center">Full Stack Developer Open to Work</h6> <br/>Bringing a wealth of knowledge and maturity across multiple disciplines.
                     </div> 
                 </div>   
             </CardHeader>

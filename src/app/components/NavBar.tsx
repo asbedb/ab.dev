@@ -16,14 +16,12 @@ import SiteBrand from "./SiteBrand";
 
 export default function NavBar(){
     return (
-            <Navbar className="bg-primary-200 p-2 overflow-hidden"> 
-                <NavbarContent>
-                    <NavbarBrand className="flex flex-col">
+            <Navbar className="bg-primary-200 py-2"> 
+                <NavbarContent className="flex flex-col">
+                    <NavbarBrand className="gap-4">
                         <SiteBrand/>
+                        <ThemeSwitcher/>
                     </NavbarBrand>
-                        <NavbarItem>
-                            <ThemeSwitcher/>
-                        </NavbarItem>
                 </NavbarContent>
             </Navbar>
     );

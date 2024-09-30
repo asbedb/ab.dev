@@ -13,7 +13,7 @@ export default function Skills(){
                 </CardHeader>
                 <CardBody className="text-primary-foreground gap-2">
                     <CodeBlock/>
-                    <p className="text-2xl flex flex-row gap-2 m-auto ">
+                    <p className="text-2xl flex  gap-2 m-auto ">
                         <FaJsSquare className="animate-pulse"/>
                         <FaHtml5 className="animate-pulse"/>
                         <FaPython className="animate-pulse"/>

@@ -61,7 +61,7 @@ export default function LatestPosts(){
                                         <span className="whitespace-normal truncate line-clamp-1">{pid.name}</span>
                                     </div>
                                     <h4 className="font-bold text-xl text-secondary-400">{pid.language || 'None'}</h4>
-                                    <p className="text-sm pt-2">Last updated: {getDaysAgo(pid.updated_at)}</p>
+                                    <p className="text-sm pt-2">Posted: {getDaysAgo(pid.updated_at)}</p>
                                 </CardHeader>
                                 <CardBody className="px-2 text-md text-foreground items-center bg-primary-600">
                                     <p className="text-primary-foreground py-4 px-2 w-full">{pid.description}</p>
