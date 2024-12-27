@@ -1,10 +1,11 @@
 "use client";
-import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
+import { Accordion, AccordionItem, Avatar} from "@nextui-org/react";
 
 export default function App() {
+    type AvatarColor = "secondary" | "default" | "primary" | "success" | "warning" | "danger";
     const ExperienceObject = {
         company: ["Lenovo", "CompTier", "Dell"],
-        borderColor: ["danger", "secondary", "success"],
+        borderColor: ["danger", "secondary", "success"] as [AvatarColor, AvatarColor, AvatarColor],
         logoSource: ["/image/lenovo_logo.jpeg", "/image/ct.png", "/image/dell.jpeg"],
         title: ["Sales Leader", "Founder and Developer", "Technical Advocate"],
         titleColor: ["text-red-500", "text-blue-500", "text-green-500"],
