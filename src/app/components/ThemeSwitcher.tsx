@@ -12,6 +12,7 @@ export default function ThemeSwitcher() {
 
     useEffect(()=>{
         setMounted(true);
+        console.log(theme)
     }, [])
     if(!mounted) return null
     return(

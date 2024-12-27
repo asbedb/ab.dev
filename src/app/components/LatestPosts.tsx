@@ -1,7 +1,6 @@
 "use client"
 import { Card, CardBody, CardHeader, Spinner, Link} from "@nextui-org/react";
 import { useEffect, useState} from "react";
-import Gradient from "./Gradient";
 import { FaGithubSquare } from "react-icons/fa";
 
 interface Git {
