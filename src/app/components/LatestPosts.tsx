@@ -41,6 +41,7 @@ export default function LatestPosts(){
                 // Type assertion to handle unknown error type
                 if (err instanceof Error) {
                     setError(err);
+                    console.log(error)
                 } else {
                     setError(new Error("Unknown error occurred"));
                 }
