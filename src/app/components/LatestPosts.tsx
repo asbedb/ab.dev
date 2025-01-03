@@ -12,6 +12,9 @@ interface Git {
 }
 
 type FetchError = Error | null;
+interface DataItem {
+    updated_at: string;  // assuming updated_at is a string date
+}
 
 export default function LatestPosts(){
     const [profile, setProfile] = useState<Git[]>([]);
@@ -35,7 +38,7 @@ export default function LatestPosts(){
                     throw new Error(`HTTP ERROR! status: ${response.status}`);
                 }
                 const data = await response.json();
-                const sortedData = data.sort((a, b) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+                const sortedData = data.sort((a: DataItem, b: DataItem) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
                 setProfile(sortedData);
             } catch (err) {
                 // Type assertion to handle unknown error type

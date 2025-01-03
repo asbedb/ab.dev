@@ -2,13 +2,15 @@
 import React, { useState } from "react";
 import Image from "next/image";
 
-export default function Gallery({ keyProp }) {
-    const galleryLinks = {
-        dssavy: ["/image/screen_dss_1.png", "/image/screen_dss_2.png"],
-        sql: ["/image/screen_sql_1.png", "/image/screen_sql_2.png"],
-        disctcg: ["", ""]
-    };
-
+interface GalleryProps {
+    keyProp: keyof typeof galleryLinks
+}
+const galleryLinks = {
+    dssavy: ["/image/screen_dss_1.png", "/image/screen_dss_2.png"],
+    sql: ["/image/screen_sql_1.png", "/image/screen_sql_2.png"],
+    disctcg: ["", ""]
+};
+export default function Gallery({ keyProp }: GalleryProps) {
     // Get images based on the passed key
     const images = galleryLinks[keyProp] || [];
 
@@ -16,7 +18,7 @@ export default function Gallery({ keyProp }) {
     const [showcaseImage, setShowcaseImage] = useState(images[0]);
 
     // Function to handle the click event on small images
-    const handleImageClick = (src) => {
+    const handleImageClick = (src: string) => {
         setShowcaseImage(src);
     };
 

@@ -5,6 +5,8 @@ import { useState } from "react";
 import Gradient from "./Gradient";
 import Gallery from "./Gallery";
 
+type GalleryKey = 'dssavy' | 'sql' | 'disctcg';
+
 export default function ProjectButton({}) {
     const [selectedProjectIndex, setSelectedProjectIndex] = useState<number | null>(null); // Manage selected project index
     const {isOpen, onOpen, onOpenChange} = useDisclosure();
@@ -81,7 +83,7 @@ export default function ProjectButton({}) {
                                     <Gradient>{ProjectDetails.projectName[selectedProjectIndex]}</Gradient>
                                 </ModalHeader>
                                 <ModalBody>
-                                    <Gallery keyProp={ProjectDetails.projectKey[selectedProjectIndex]} />
+                                    <Gallery keyProp={ProjectDetails.projectKey[selectedProjectIndex] as GalleryKey} />
                                     <p className="text-medium leading-snug text-primary-foreground" dangerouslySetInnerHTML={{ __html: ProjectDetails.projectDescription[selectedProjectIndex]}}></p>
                                 </ModalBody>
                                 <ModalFooter>
