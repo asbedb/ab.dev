@@ -1,7 +1,9 @@
 "use client"
-import {Card, CardHeader, CardFooter, Button} from "@nextui-org/react";
+import {Card, CardHeader, CardFooter, Button, Chip} from "@nextui-org/react";
 import { useState } from "react";
 import Gallery from "./Gallery";
+
+type GalleryProps = 'dssavy' |  'sql' |  'disctcg'
 
 export default function ProjectButton({}) {
     const [index, setIndex] = useState(0)
@@ -13,16 +15,16 @@ export default function ProjectButton({}) {
             "#"],
         projectImages: ["/image/btn-driveshift.png", "/image/btn-siteql.png", "/image/btn-disctcg.png"],
         projectTechnologies:[`
-            Pure Javascript
-            NodeJS
-            HTML 
+            Pure Javascript,
+            NodeJS,
+            HTML, 
             CSS`,
             `
-            Pure Javascript
-            NodeJS
-            PHP
-            SQL
-            HTML 
+            Pure Javascript,
+            NodeJS,
+            PHP,
+            SQL,
+            HTML, 
             CSS`,
             `Technologies for disctcg`
         ],
@@ -42,25 +44,54 @@ export default function ProjectButton({}) {
         projectKey: ["dssavy", "sql", "disctcg"]
     };
 
-    const updateIndex = () => {
+    const updateIndexNext = () => {
         setIndex((prevIndex) =>
             prevIndex < ProjectDetails.projectKey.length - 1 ? prevIndex + 1 : 0
         );
     }
 
+    const updateIndexPrev = () => {
+        setIndex((prevIndex) =>
+            prevIndex > 0 ? prevIndex - 1 : ProjectDetails.projectKey.length - 1
+        );
+    };
+    
     return (
-        <>
+        <> 
             <Card className="flex bg-primary-600" key={index}>
-                <CardHeader>
+                <CardHeader className="gap-2">
                     <h4 className="text-2xl font-bold text-primary-foreground">{ProjectDetails.projectName[index]}</h4>
-                    <p></p>
+                    {ProjectDetails.projectTechnologies[index].split(',').map((subTech, subIndex) => (
+                            <Chip 
+                                key={`${index}-${subIndex}`} 
+                                classNames={{
+                                    base: "bg-gradient-to-br from-indigo-500 to-pink-500 border-small border-white/50 shadow-pink-500/30",
+                                    content: "drop-shadow shadow-black text-white",
+                                }}
+                                variant="shadow"
+                            >
+                                {subTech.trim()}
+                            </Chip>
+                        ))
+                    }
+
                 </CardHeader>
-                <Gallery keyProp={ProjectDetails.projectKey[index]}></Gallery>
+                <Gallery keyProp={ProjectDetails.projectKey[index] as GalleryProps}></Gallery>
+                <div className="grid grid-cols-2 grid-flow-col">
+                <Button className="text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexPrev}>
+                        Previous
+                    </Button>
+                <Button className="text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexNext}>
+                    Next
+                </Button>
+                </div>
+
                 <CardFooter className="flex bg-primary-500 justify-between text-primary-foreground">
+
                     <div>
                         <p className="text-large">{ProjectDetails.projectDescription[index]}</p>
                     </div>
-                    <Button className="text-tiny" color="primary" radius="full" size="sm" onClick={updateIndex}>
+                    <Button className="text-tiny" color="primary" radius="full" size="sm" >
                         GitHub
                     </Button>
                 </CardFooter>
