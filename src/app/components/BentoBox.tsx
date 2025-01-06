@@ -8,28 +8,25 @@ import PostContainer from "./PostContainer";
 export default function BentoBox(){
     return(
     <>
-        <div className="grid h-screen gap-4 p-4 mx-4 grid-flow-col md:col-span-1">
-            <div className="flex rounded-lg h-fit col-start-1">
-                <AboutCard />
-            </div>
-            
-            {/* Post Container: 30% of rows (spans 2 rows, 2 columns) */}
-            <div className="flex rounded-lg h-fit col-start-1">
+        <div className="grid 2xl:grid-cols-2 grid-flow-col 2xl:px-24 grid-cols-1">
+            <div className="flex flex-col rounded-lg col-span-1 h-fit">
+                <div className="flex rounded-lg h-1/4 p-4"><AboutCard /></div>
+                <div className="flex rounded-lg h-1/4 p-4"> 
                 <PostContainer>
-                    <LatestPosts />
-                </PostContainer>
+                        <LatestPosts />
+                </PostContainer>               
+                </div>             
             </div>
-
-            {/* Showcase Section: Shares 70% with Skills (spans 2 rows, 1 column) */}
-            <div className="flex rounded-lg h-fit col-start-2">
-                <Showcase />
-            </div>
-            
-            {/* Skills Section: Shares 70% with Showcase (spans 2 rows, 1 column) */}
-            <div className="flex rounded-lg h-1/2">
-                <Skills />
+            <div className="flex flex-col rounded-lg col-span-1 h-fit 2xl:row-start-1 row-start-2">
+                <div className="flex rounded-lg h-fit p-4">
+                    <Showcase/>
+                </div>
+                <div className="flex rounded-lg p-4">
+                    <Skills />
+                </div>
             </div>
         </div>
+
     </>
     )
 }
