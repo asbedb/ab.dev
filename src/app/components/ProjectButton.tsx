@@ -77,13 +77,13 @@ export default function ProjectButton({}) {
 
                 </CardHeader>
                 <Gallery keyProp={ProjectDetails.projectKey[index] as GalleryProps}></Gallery>
-                <div className="grid grid-cols-2 grid-flow-col">
-                <Button className="text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexPrev}>
-                        Previous
+                <div className="grid grid-cols-2 justify-between gap-96 p-4">
+                    <Button className="bg-gradient-to-br from-primary-500 to-secondary-500 border-small text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexPrev}>
+                            Previous
+                        </Button>
+                    <Button className="bg-gradient-to-br from-primary-500 to-secondary-500 border-small text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexNext}>
+                        Next
                     </Button>
-                <Button className="text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexNext}>
-                    Next
-                </Button>
                 </div>
 
                 <CardFooter className="flex bg-primary-500 justify-between text-primary-foreground">
