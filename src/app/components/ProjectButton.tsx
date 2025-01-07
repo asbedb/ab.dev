@@ -59,7 +59,7 @@ export default function ProjectButton({}) {
     return (
         <> 
             <Card className="flex bg-primary-600" key={index}>
-                <CardHeader className="gap-2">
+                <CardHeader className="flex flex-col items-start 2xl:flex-row gap-2">
                     <h4 className="text-2xl font-bold text-primary-foreground">{ProjectDetails.projectName[index]}</h4>
                     {ProjectDetails.projectTechnologies[index].split(',').map((subTech, subIndex) => (
                             <Chip 
