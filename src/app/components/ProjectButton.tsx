@@ -77,7 +77,7 @@ export default function ProjectButton({}) {
 
                 </CardHeader>
                 <Gallery keyProp={ProjectDetails.projectKey[index] as GalleryProps}></Gallery>
-                <div className="grid grid-cols-2 justify-between gap-96 p-4">
+                <div className="grid grid-cols-2 justify-between 2xl:gap-96 p-4">
                     <Button className="bg-gradient-to-br from-primary-500 to-secondary-500 border-small text-tiny" color="primary" radius="full" size="sm" onClick={updateIndexPrev}>
                             Previous
                         </Button>
