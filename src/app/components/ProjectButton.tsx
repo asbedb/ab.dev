@@ -8,12 +8,11 @@ type GalleryProps = 'dssavy' |  'sql' |  'disctcg'
 export default function ProjectButton({}) {
     const [index, setIndex] = useState(0)
     const ProjectDetails = {
-        projectName: ["DriveShift Savvy", "siteQL", "DiscPyTCG"],
+        projectName: ["DriveShift Savvy", "siteQL", "BingeBot"],
         projectLinks: [
             "https://github.com/asbedb/Drive-ShiftSavvy", 
             "https://github.com/asbedb/siteQL", 
             "#"],
-        projectImages: ["/image/btn-driveshift.png", "/image/btn-siteql.png", "/image/btn-disctcg.png"],
         projectTechnologies:[`
             Pure Javascript,
             NodeJS,
@@ -28,22 +27,33 @@ export default function ProjectButton({}) {
             CSS`,
             `Google Gemini,
             TypeScript,
+            NextJS,
+            API,
             Python,
             Flask`
         ],
         projectDescription: [
             `
-            This application provides an intuitive interface to input vehicle details, 
+            DriveShift Savvy provides an intuitive interface to input vehicle details, 
             select shift parameters, and calculate various metrics such as total earnings, 
             expenses, and travel distances. 
             Whether you're a driver trying to optimize your work schedule or a vehicle owner 
             curious about fuel consumption, this tool offers valuable insights to help you make informed decisions.
             `,
             `
-            siteQL is my first major undertaking to build a full-stack web application using NextJS, TypeScript and various libraries associated.
-            The application is built to be a modular SQL database/website aplication installer with credentials created and hashed for first user login.
-            The installer goes through a guided form and finalises with a database configuration and reroute.`,
-            "Description of DiscPyTCG"
+            siteQL is my first major full-stack web application, built using Next.js, TypeScript, and various supporting 
+            libraries. The application is designed as a modular SQL database and website installer, providing a seamless 
+            setup process.
+            It features a guided form that walks users through the installation steps, creating and securely hashing 
+            credentials for the initial user login. Upon completion, the installer configures the database and redirects 
+            users to finalize the setup.
+            `,
+            `
+            BingeBot is an AI assistant powered by Google Gemini, designed to help you discover your next media experience. By leveraging APIs connected 
+            to the TMDB media platform, it guides users through a simple questionnaire, generating a prompt for Gemini to recommend the perfect viewing 
+            experience.
+            The project features a Flask-based Python backend and a Next.js/React frontend for seamless performance and user experience.
+            `
         ],
         projectKey: ["dssavy", "sql", "disctcg"]
     };

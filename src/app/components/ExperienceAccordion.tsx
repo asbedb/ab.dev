@@ -9,8 +9,8 @@ export default function App() {
         logoSource: ["/image/lenovo_logo.jpeg", "/image/ct.png", "/image/dell.jpeg"],
         title: ["Sales Leader", "Founder and Developer", "Technical Advocate"],
         titleColor: ["text-red-500", "text-blue-500", "text-green-500"],
-        experienceYears: ["8 Years", "5 Years", "10 Years"],
-        experienceMonths: ["September 2015 - June 2024 (Multiple Roles)", "", ""],
+        experienceYears: ["8 Years", "Continued Profession", "3 Years"],
+        experienceMonths: ["September 2015 - June 2024 (Multiple Roles)", "February 2019 - Present", "May 2013 - September 2015"],
         roleDescription: [
         `   <li>Managed Business Development Managers focused on services solutions to government agencies, educational institutions, and large enterprise customers</li><br/>
             <li>Specialised in Managed Services, Helpdesk, Cloud and Security with multiple financial disciplines including as a Service</li><br/>
