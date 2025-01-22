@@ -14,8 +14,8 @@ interface GalleryProps {
 }
 const galleryLinks = {
     dssavy: ["/image/screen_dss_1.png", "/image/screen_dss_2.png"],
-    sql: ["/image/screen_sql_1.png", "/image/screen_sql_2.png"],
-    disctcg: ["", ""]
+    sql: ["/image/screen_sql_1.png", "/image/screen_sql_2.png", , "/image/screen_sql_3.png"],
+    disctcg: ["/image/screen_bingebot_1.png", "/image/screen_bingebot_2.png"]
 };
 
 
