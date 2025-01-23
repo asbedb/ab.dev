@@ -6,7 +6,7 @@ export default function SocialIcons(){
     return(
         <>
         <div className="gap-1">
-                <Link href="https:/www.github.com/asbedb" target="_blank">
+                <Link href="https://www.github.com/asbedb" target="_blank">
                     <Button color="secondary" radius="full" variant="bordered" startContent={<FaGithub className="text-3xl"/>}>
                         
                     </Button>
@@ -16,12 +16,12 @@ export default function SocialIcons(){
                     
                 </Button>
             </Link>
-            <Link href="https:/www.medium.com/asbedb" target="_blank">
+            <Link href="https://www.medium.com/asbedb" target="_blank">
                 <Button color="secondary" radius="full" variant="bordered" startContent={<FaMedium className="text-3xl"/>}>
                     
                 </Button>
             </Link>
-            <Link href="https:/www.twitter.com/asbedb" target="_blank">
+            <Link href="https://www.twitter.com/asbedb" target="_blank">
                 <Button color="secondary" radius="full" variant="bordered" startContent={<FaSquareXTwitter className="text-3xl"/>}>
                     
                 </Button>
