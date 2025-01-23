@@ -20,7 +20,7 @@ export default function App() {
 
         `   <li>Business-to-business consulting leveraging a strong established sales and technical base.</li><br/>
             <li>Developed and sold online e-commerce platform, learning management system and content management system which utilised subscription services</li><br/>
-            <li>Also established a brick and mortar retail front in Melbourne Australia at the time specialising in fine foods</li>`,
+            <li>Built custom full stack web applications utilsing, SQL, JavaScript and Python.</li>`,
 
         `   <li>Spearheaded initiatives aimed at educating Enterprise, Government and Education clients seeking to understand modern technologies</li><br/>
             <li>Lead initatives involved in virtualising environments and helped Dell secure one of the largest wins in Asia pacific for vmWare</li><br/>
