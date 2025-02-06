@@ -41,7 +41,7 @@ export default function App() {
 
     return (
         <>
-            <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl">
+            <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl overflow-hidden">
                 {ExperienceObject.company.map((company, index) => (
                     <AccordionItem
                         textValue="Career Text"
@@ -56,18 +56,18 @@ export default function App() {
                             />
                         }
                         subtitle={
-                            <span className="text-secondary-200 text-[4vw]">{company}</span>
+                            <span className="text-secondary-200 md:text-[1vw]">{company}</span>
                         }
                         title={
-                            <span className=" text-[3vh] font-bold text-primary-foreground">{ExperienceObject.title[index]}</span>
+                            <span className=" md:text-[2vw] font-bold text-primary-foreground">{ExperienceObject.title[index]}</span>
                         }
                     >
-                        <div>
+                        <div className="overflow-hidden">
                             <strong className="text-large">
                                 <span className="text-secondary">{ExperienceObject.experienceYears[index]}: </span>{ExperienceObject.experienceMonths[index]}
                             </strong>
                             <br />
-                            <div className="text-[4vw] py-2 text-wrap leading-snug">
+                            <div className="md:text-[calc(1vw + 1em)] py-2 text-wrap leading-snug">
                                 {ExperienceObject.roleDescription[index].split('###').map((paragraph, idx) => (
                                     <p key={idx} className="mb-4">{paragraph}</p>
                                 ))}

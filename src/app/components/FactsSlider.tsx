@@ -90,7 +90,7 @@ const FactsSlider: React.FC<ShowCaseSliderProps> = ({ onProjectChange }) => {
                                 <div className="gap-1 p-4">
                                     <h4 className="
                                         text-[8vw]
-                                        md:text-[3vw]
+                                        md:text-[2vw]
                                         font-bold 
                                         leading-tight 
                                         line-clamp-4

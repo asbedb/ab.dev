@@ -47,7 +47,7 @@ export default function AboutCard(){
                 </div>   
             </CardHeader>
             <CardBody>
-                    <div className="flex w-full h-full mx-auto overflow-hidden"><SocialIcons/></div>
+                    <div className="flex w-full h-full overflow-hidden justify-center"><SocialIcons/></div>
             </CardBody>
         </Card>
         </AnimatedBorder>
