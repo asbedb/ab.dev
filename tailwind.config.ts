@@ -22,30 +22,30 @@ const config: Config = {
         layout:{},
         colors:{
           primary:{
-            900: '#191919',
-            800: '#333333',
-            700: '#4c4c4c',
-            600: '#666666',
-            500: '#808080',
-            400: '#999999',
-            300: '#b3b3b3',
-            200: '#cccccc',
-            100: '#e6e6e6',
-            50: '#ffffff',
-            DEFAULT: '#ffffff',
+            900: '#404040',    // Darkest gray
+            800: '#595959',    // Darker gray
+            700: '#737373',    // Medium-dark gray
+            600: '#8c8c8c',    // Slightly lighter dark gray
+            500: '#a6a6a6',    // Lighter dark gray
+            400: '#bfbfbf',    // Light-medium gray
+            300: '#d9d9d9',    // Light gray
+            200: '#e6e6e6',    // Very light gray
+            100: '#e6e6e6',    // Base gray
+            50: '#f2f2f2',     // Almost white, lightest gray            
+            DEFAULT: '#f2f2f2',
             foreground: '#000000',
           },
           secondary:{
-            900: '#f1f1f1',
-            800: '#e3e3e3',
-            700: '#d6d6d6',
-            600: '#c8c8c8',
-            500: '#bababa',
-            400: '#acacac',
-            300: '#9e9e9e',
-            200: '#919191',
-            100: '#838383',
-            50: '#757575',
+            50: '#f1f1f1',
+            100: '#d0d0d0',
+            200: '#a1a1a1',
+            300: '#7a7a7a',
+            400: '#535353',
+            500: '#3c3c3c',
+            600: '#292929',
+            700: '#1c1c1c',
+            800: '#121212',
+            900: '#090909',            
             DEFAULT: '#757575',
             foreground: '#000000' 
           }
@@ -87,6 +87,7 @@ const config: Config = {
         },
       },
       terminal:{
+        extend: 'dark',
         layout: {},
         colors:{
           background: '#9badb5',

@@ -1,13 +1,9 @@
-//import Image from "next/image";
-
-import NavBar from "./components/NavBar";
-import BentoBox from "./components/BentoBox";
+import MainGrid from "./components/MainGrid";
 
 export default function Home() {
   return (
     <>
-      <NavBar/>
-      <BentoBox/>
+      <MainGrid/>
     </>
   );
 }

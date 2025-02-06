@@ -1,18 +1,33 @@
-import React from "react";
+"use client"
+import {useState, useEffect} from "react";
 import Gradient from "./Gradient";
 
 export default function SiteBrand() {
+    const [text, setText] = useState("asbedb.dev/")
 
+    useEffect(() =>{
+        const updateText = () => {
+            setText(window.innerWidth >= 768 ? "asbedb.dev/" : "ab.dev/")
+        }
+        updateText()
+        window.addEventListener("resize", updateText)
+        return () => window.removeEventListener("resize", updateText)
+    }, [])
     return(
         <>
+        <div className="flex w-full items-center">
             <span className="
-                text-4xl
+                hidden
+                w-full
                 text-center
-                md:text-6xl">
+                md:flex
+                md:text-[2vw]
+                hover:cursor-default">
                     <Gradient>
-                    asbedb.dev/
+                        {text}
                     </Gradient>
             </span>
+        </div>
         </>
     )
 }

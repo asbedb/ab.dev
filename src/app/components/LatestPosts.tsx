@@ -7,28 +7,16 @@ interface Git {
     name: string;
     html_url: string;
     description: string;
-    updated_at: string;
     language: string;
 }
 
 type FetchError = Error | null;
-interface DataItem {
-    updated_at: string;  // assuming updated_at is a string date
-}
+
 
 export default function LatestPosts(){
     const [profile, setProfile] = useState<Git[]>([]);
     const [error, setError] = useState<FetchError>(null);
 
-    const getDaysAgo = (dateString : string) => {
-        const givenDate = new Date(dateString);
-        const currentDate = new Date();
-        
-        // Calculate the difference in time and convert to days
-        const timeDifference = currentDate.getTime() - givenDate.getTime();
-        const daysAgo = Math.floor(timeDifference / (1000 * 60 * 60 * 24));      
-        return `${daysAgo} days ago`;
-    };
 
     useEffect(() => {
         async function fetchGit() {
@@ -38,8 +26,7 @@ export default function LatestPosts(){
                     throw new Error(`HTTP ERROR! status: ${response.status}`);
                 }
                 const data = await response.json();
-                const sortedData = data.sort((a: DataItem, b: DataItem) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
-                setProfile(sortedData);
+                setProfile(data);
             } catch (err) {
                 // Type assertion to handle unknown error type
                 if (err instanceof Error) {
@@ -64,7 +51,6 @@ export default function LatestPosts(){
                                         <span className="whitespace-normal truncate line-clamp-1">{pid.name}</span>
                                     </div>
                                     <h4 className="font-bold text-xl text-secondary-400">{pid.language || 'None'}</h4>
-                                    <p className="text-sm pt-2">Posted: {getDaysAgo(pid.updated_at)}</p>
                                 </CardHeader>
                                 <CardBody className="px-2 text-md text-foreground items-center bg-primary-600">
                                     <p className="text-primary-foreground py-4 px-2 w-full">{pid.description}</p>

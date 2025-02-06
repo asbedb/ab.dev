@@ -39,44 +39,44 @@ export default function Gallery({ keyProp }: GalleryProps) {
 
     return (
         <>
-            <div className="flex mx-auto py-2 flex-col gap-2 bg-primary-600">
+            <div className="flex w-full py-2 flex-col gap-2 bg-primary-600">
                 {/* Large showcase image */}
-                <div className="flex rounded-md cursor-pointer hover:animate-pulse" onClick={onOpen}>
+                <div className="flex mx-auto rounded-md cursor-pointer hover:animate-pulse" onClick={onOpen}>
                     <Image 
                         isZoomed
                         src={showcaseImage} 
                         alt="Showcase Image" 
-                        className="h-[450px] w-fit cursor-pointer"
+                        className="h-[200px] xl:h-[450px] w-fit cursor-pointer"
                     />
-                <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="full">
-                    <ModalContent>
-                        {(onClose) => (
-                            <>
-                            <ModalHeader className="flex flex-col gap-1">Image</ModalHeader>
-                            <ModalBody>
-                                <Image 
-                                    src={showcaseImage} 
-                                    alt="Showcase Image" 
-                                    className="flex w-screen cursor-pointer"
-                                    onClick={openImageNewTab}
-                                />
-                            </ModalBody>
-                            <ModalFooter>
-                                <Button color="danger" variant="light" onPress={onClose}>
-                                Close
-                                </Button>
-                            </ModalFooter>
-                            </>
-                        )}
-                    </ModalContent>
-                </Modal>
+                    <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="full">
+                        <ModalContent>
+                            {(onClose) => (
+                                <>
+                                <ModalHeader className="flex flex-col gap-1">Image</ModalHeader>
+                                <ModalBody>
+                                    <Image 
+                                        src={showcaseImage} 
+                                        alt="Showcase Image" 
+                                        className="flex w-screen cursor-pointer"
+                                        onClick={openImageNewTab}
+                                    />
+                                </ModalBody>
+                                <ModalFooter>
+                                    <Button color="danger" variant="light" onPress={onClose}>
+                                    Close
+                                    </Button>
+                                </ModalFooter>
+                                </>
+                            )}
+                        </ModalContent>
+                    </Modal>
                 </div>
-                <div className="grid grid-cols-4">
+                <div className="flex flex-row w-full mx-auto justify-center">
                     {images.map((src, index) => (
                         src && (
                             <div 
                                 key={index} 
-                                className="col-span-1 cursor-pointer hover:animate-pulse" 
+                                className="cursor-pointer hover:animate-pulse" 
                                 onClick={() => handleImageClick(src)} // Update showcase image on click
                             >
                                 <Image 

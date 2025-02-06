@@ -2,10 +2,13 @@
 import {Card, CardHeader, CardFooter, Button, Chip} from "@nextui-org/react";
 import { useState } from "react";
 import Gallery from "./Gallery";
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
 
 type GalleryProps = 'dssavy' |  'sql' |  'disctcg'
 
-export default function ProjectButton({}) {
+export default function ProjectCard({}) {
     const [index, setIndex] = useState(0)
     const ProjectDetails = {
         projectName: ["DriveShift Savvy", "siteQL", "BingeBot"],
@@ -93,22 +96,25 @@ export default function ProjectButton({}) {
                             ))
                         }
                     </div>
-
-
                 </CardHeader>
-                <div className="grid grid-cols-2 justify-between 2xl:gap-96 p-4">
-                    <Button className="bg-gradient-to-b from-primary-500 to-primary-50 text-medium font-bold text-secondary" radius="full" size="sm" onClick={updateIndexPrev}>
-                            Previous
-                        </Button>
-                    <Button className="bg-gradient-to-b from-primary-500 to-primary-50 text-medium font-bold text-secondary" radius="full" size="sm" onClick={updateIndexNext}>
-                        Next
-                    </Button>
-                </div>
+                <motion.button
+                    onClick={updateIndexPrev}
+                    className="absolute top-1/2 left-2 p-3 bg-black/40 hover:bg-black/60 transition rounded-full z-20"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                >
+                    <ArrowLeft className="text-white w-8 h-8" />
+                </motion.button>
+                <motion.button
+                        onClick={updateIndexNext}
+                        className="absolute top-1/2 right-2 p-3 bg-black/40 hover:bg-black/60 transition rounded-full z-40"
+                        whileHover={{ scale: 1.1 }}
+                        whileTap={{ scale: 0.9 }}
+                    >
+                        <ArrowRight className="text-white w-8 h-8" />
+                </motion.button>
                 <Gallery keyProp={ProjectDetails.projectKey[index] as GalleryProps}></Gallery>
-
-
                 <CardFooter className="flex bg-primary-500 justify-between text-primary-foreground">
-
                     <div>
                         <p className="text-large">{ProjectDetails.projectDescription[index]}</p>
                     </div>
