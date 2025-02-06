@@ -9,7 +9,7 @@ export default function Projects() {
     return (
         <>
 
-            <Card className="flex flex-col p-4 bg-background shadow-none ">
+            <Card className="flex flex-col md:p-4 bg-background shadow-none ">
                 <CardHeader>
                     <h1 className="flex
                                     w-full
