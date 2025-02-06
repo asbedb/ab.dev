@@ -54,7 +54,7 @@ function MainSidebar() {
                 <SiteBrand />
             </div>
             <hr className="hidden md:flex my-4 h-0.5 border-t-0 bg-black/20 dark:bg-white/20" />
-            <div className="flex flex-col items-center md:items-start gap-y-4 px-4 w-full h-full">
+            <div className="flex flex-col items-center md:items-start gap-y-2 md:gap-y-4 px-4 w-full h-full">
                 <SidebarLinkText link="home" text="Home" icon={<FaHome className="text-secondary-50 text-2xl md:text-3xl" />} />
                 <SidebarLinkText link="career" text="Career" icon={<FaSuitcase className="text-secondary-50 text-2xl md:text-3xl" />} />
                 <SidebarLinkText link="projects" text="Projects" icon={<FaFolder className="text-secondary-50 text-2xl md:text-3xl" />} />

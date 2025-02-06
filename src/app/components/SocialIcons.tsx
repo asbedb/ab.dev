@@ -5,7 +5,7 @@ import { FaGithub , FaLinkedin, FaMedium, FaSquareXTwitter } from 'react-icons/f
 export default function SocialIcons(){
     return(
         <>
-        <div className="flex gap-1">
+        <div className="flex flex-wrap gap-1 justify-center p-2">
                 <Link href="https://www.github.com/asbedb" target="_blank">
                     <Button color="secondary" radius="full" variant="bordered" startContent={<FaGithub className="text-3xl"/>}>
                         

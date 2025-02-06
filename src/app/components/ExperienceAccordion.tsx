@@ -56,10 +56,10 @@ export default function App() {
                             />
                         }
                         subtitle={
-                            <span className="text-secondary-200 text-[2vh]">{company}</span>
+                            <span className="text-secondary-200 text-[4vw]">{company}</span>
                         }
                         title={
-                            <span className=" text-[2.2vh] font-bold text-primary-foreground">{ExperienceObject.title[index]}</span>
+                            <span className=" text-[3vh] font-bold text-primary-foreground">{ExperienceObject.title[index]}</span>
                         }
                     >
                         <div>
@@ -67,7 +67,7 @@ export default function App() {
                                 <span className="text-secondary">{ExperienceObject.experienceYears[index]}: </span>{ExperienceObject.experienceMonths[index]}
                             </strong>
                             <br />
-                            <div className="text-[2vh] py-2 text-wrap leading-snug">
+                            <div className="text-[4vw] py-2 text-wrap leading-snug">
                                 {ExperienceObject.roleDescription[index].split('###').map((paragraph, idx) => (
                                     <p key={idx} className="mb-4">{paragraph}</p>
                                 ))}

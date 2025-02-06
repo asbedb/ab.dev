@@ -85,21 +85,20 @@ const FactsSlider: React.FC<ShowCaseSliderProps> = ({ onProjectChange }) => {
                         transition={{ duration: 0.4, ease: "easeOut"}}
                         {...swipeHandlers}
                     >
-                        <Card className="w-full bg-primary-100 text-primary-foreground min-h-[620px] max-h-[620px]">
+                        <Card className="w-full bg-primary-100 text-primary-foreground md:min-h-[620px] md:max-h-[620px]">
                             <CardHeader className=" gap-2">
                                 <div className="gap-1 p-4">
                                     <h4 className="
-                                        text-4xl
+                                        text-[8vw]
+                                        md:text-[3vw]
                                         font-bold 
                                         leading-tight 
                                         line-clamp-4
                                         md:line-clamp-3
-                                        md:text-5xl
                                         text-primary-foreground
                                         break-words
                                         tracking-tight
                                         max-w-[20ch]
-                                        min-h-[calc(1.2em*3)]
                                         md:max-h-[calc(1.2em*5)]
                                         ">
                                         <Gradient>{currentProject.title || "No Title"}</Gradient>
