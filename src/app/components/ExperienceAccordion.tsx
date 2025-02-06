@@ -44,6 +44,7 @@ export default function App() {
             <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl">
                 {ExperienceObject.company.map((company, index) => (
                     <AccordionItem
+                        textValue="Career Text"
                         key={index}
                         aria-label={company}
                         startContent={
@@ -58,7 +59,7 @@ export default function App() {
                             <span className="text-secondary-200 text-[2vh]">{company}</span>
                         }
                         title={
-                            <span className=" text-[2.2vh] font-bold">{ExperienceObject.title[index]}</span>
+                            <span className=" text-[2.2vh] font-bold text-primary-foreground">{ExperienceObject.title[index]}</span>
                         }
                     >
                         <div>
