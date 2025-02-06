@@ -89,11 +89,7 @@ export default function Gallery({ keyProp }: GalleryProps) {
                         )
                     ))}
                 </div>
-
             </div>
-                {/* Small images
-                
-            </div> */}
         </>
     );
 }

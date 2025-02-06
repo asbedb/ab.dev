@@ -6,6 +6,13 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "asbedb.dev/",
   description: "Portfolio homepage for Technology Professional - Asbed Boymoushakian",
+  openGraph: {
+    title: "Asbed Boymoushakian - Portfolio",
+    description: "Portfolio homepage for Technology Professional - Asbed Boymoushakian",
+    images: "/image/pfp.jpg", // Path to the image you want to use
+    url: "https://asbedb.dev",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
