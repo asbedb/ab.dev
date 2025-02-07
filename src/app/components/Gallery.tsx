@@ -10,12 +10,12 @@ import {Image,
     ModalFooter,} from "@nextui-org/react";
 
 interface GalleryProps {
-    keyProp: keyof typeof galleryLinks
+    keyProp: keyof typeof galleryLinks; 
 }
 const galleryLinks = {
     dssavy: ["/image/screen_dss_1.png", "/image/screen_dss_2.png"],
-    sql: ["/image/screen_sql_1.png", "/image/screen_sql_2.png", , "/image/screen_sql_3.png"],
-    disctcg: ["/image/screen_bingebot_1.png", "/image/screen_bingebot_2.png"]
+    sitesql: ["/image/screen_sql_1.png", "/image/screen_sql_2.png", , "/image/screen_sql_3.png"],
+    bingebot: ["/image/screen_bingebot_1.png", "/image/screen_bingebot_2.png"]
 };
 
 
@@ -46,7 +46,7 @@ export default function Gallery({ keyProp }: GalleryProps) {
                         isZoomed
                         src={showcaseImage} 
                         alt="Showcase Image" 
-                        className="h-[200px] xl:h-[450px] w-fit cursor-pointer"
+                        className="h-[150px] xl:h-[450px] w-fit cursor-pointer"
                     />
                     <Modal isOpen={isOpen} onOpenChange={onOpenChange} size="full">
                         <ModalContent>
@@ -83,7 +83,7 @@ export default function Gallery({ keyProp }: GalleryProps) {
                                     isZoomed
                                     src={src} 
                                     alt={`Screenshot ${index + 1}`} 
-                                    className="h-[100px]"
+                                    className="h-[50px]"
                                 />
                             </div>
                         )
