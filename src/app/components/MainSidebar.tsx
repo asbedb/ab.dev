@@ -62,7 +62,7 @@ const MainSidebar: React.FC<SideBarProps> = ({ mainContentTarget }) => {
                 fixed top-0 left-0 h-screen w-fit p-2 bg-primary text-secondary-100 
                 transition-transform duration-300 z-40 rounded-tr-3xl 
                 ${isOpen ? "translate-x-0" : "-translate-x-full"} 
-                md:translate-x-0 md:relative md:w-full overflow-y-auto
+                md:translate-x-0 md:relative md:w-full overflow-hidden
                 `}
             >
                 <div className="px-5">
