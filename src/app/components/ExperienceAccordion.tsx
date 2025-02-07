@@ -34,9 +34,6 @@ const experienceObject = {
     ]
 };
 
-type AvatarColor = "secondary" | "default" | "primary" | "success" | "warning" | "danger";
-const experienceKeys = Object.keys(experienceObject) as (keyof typeof experienceObject)[];
-
 export default function App() {
     return (
         <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl overflow-hidden">
