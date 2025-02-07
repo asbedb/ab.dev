@@ -37,7 +37,6 @@ const projectDetails = {
     projectKey: ["dssavy", "sitesql", "bingebot"] as const,
 };
 
-type GalleryProps = (typeof projectDetails.projectKey)[number];
 
 export default function ProjectCard() {
     const [index, setIndex] = useState(0);
