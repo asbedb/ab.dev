@@ -1,91 +1,102 @@
 "use client";
-import { Accordion, AccordionItem, Avatar } from "@nextui-org/react";
-import { motion } from "framer-motion";
-
-// Predefined experience object
-const experienceObject = {
-    company: ["", "Lenovo", "Dell"],
-    borderColor: ["secondary", "danger", "success"] as const,
-    logoSource: ["/image/pfp.jpg/", "image/lenovo_logo.jpeg", "/image/dell.jpeg"],
-    title: ["Software Developer and Consultant", "Sales Leader", "Technical Advocate"],
-    experienceYears: ["Present", "8 Years", "3 Years"],
-    experienceMonths: ["February 2019 - Present", "September 2015 - June 2024 (Multiple Roles)", "May 2013 - September 2015"],
-    roleDescription: [
-        `I offer business-to-business consulting, leveraging a strong foundation in both sales and technical expertise. ### 
-        I’ve successfully developed and sold a range of solutions, including an online e-commerce platform, a learning management system, 
-        and a content management system, all powered by subscription-based services. In addition to my product development experience, 
-        I’ve built custom full-stack web applications using a variety of technologies, including SQL, JavaScript, and Python. ###
-        I work closely with clients to develop solutions that solve complex challenges, streamline operations, and foster sustainable growth.`,
-        `As a Services Sales Leader, I led and managed Business Development teams focused on delivering service solutions 
-        to government agencies, educational institutions, and large enterprise clients. ###
-        I specialized in driving sales for Managed Services, Helpdesk, Cloud, and Security solutions, with a strong understanding of financial models, including 
-        "as a Service" offerings. My teams' expertise aligned to modern technology management practices, with a proven track record of helping 
-        organizations transition to Modern Management. ### 
-        Throughout my career, I’ve been instrumental in driving growth across multiple technology disciplines, achieving top-line revenue increases of up to 400% 
-        and consistently maintaining profitability levels between 35-40%. With a focus on strategic business development, I combine technical knowledge 
-        with a passion for creating solutions that help organizations achieve long-term success. ### 
-        I’m committed to driving transformation while empowering the team alongside me to reach the same results.`,
-        `As a Technology Advocate, I led strategic initiatives driving modern technology adoption across Enterprise, Government, and Education sectors. ###
-        I specialized in delivering transformative solutions, resulting in significant client outcomes and revenue growth. I focused on architecting and implementing virtualization solutions, 
-        notably securing one of Asia Pacific's largest VMware deployments that modernized client infrastructure and improved operational efficiency by 40%. 
-        Through strategic leadership in end-user computing implementations, I expanded our client footprint by 200% while driving the adoption of modern SCCM practices that reduced IT management overhead by 35%.
-        I consistently delivered projects that achieved 98% Net Promoter Score rates while maintaining project profitability at 30%. ###
-        I'm passionate about enabling organizations to leverage innovative technologies that drive measurable business outcomes and sustainable growth.`
-    ]
-};
+import { Avatar } from "@nextui-org/react";
+import Gradient from "./Gradient";
 
 export default function App() {
     return (
-        <Accordion selectionMode="multiple" className="bg-primary-100 text-primary-foreground rounded-3xl overflow-hidden">
-            {experienceObject.company.map((company, index) => {
-                const roleDesc = experienceObject.roleDescription[index].split('###');
-                return (
-                    <AccordionItem
-                        key={index}
-                        aria-label={company}
-                        startContent={
-                            <Avatar
-                                isBordered
-                                color={experienceObject.borderColor[index]}
-                                radius="lg"
-                                src={experienceObject.logoSource[index]}
-                            />
-                        }
-                        subtitle={
-                            <motion.span 
-                                className="text-secondary-200 text-sm"
-                                initial={{ opacity: 0 }} 
-                                animate={{ opacity: 1 }} 
-                                transition={{ delay: 0.2 }}
-                            >
-                                {company}
-                            </motion.span>
-                        }
-                        title={
-                            <motion.span 
-                                className="font-bold text-primary-foreground text-lg"
-                                initial={{ opacity: 0 }} 
-                                animate={{ opacity: 1 }} 
-                                transition={{ delay: 0.3 }}
-                            >
-                                {experienceObject.title[index]}
-                            </motion.span>
-                        }
-                    >
-                        <div className="overflow-hidden">
-                            <strong className="text-lg">
-                                <span className="text-secondary">{experienceObject.experienceYears[index]}: </span>{experienceObject.experienceMonths[index]}
-                            </strong>
-                            <br />
-                            <div className="md:text-[calc(1vw + 1em)] py-2 text-wrap leading-snug">
-                                {roleDesc.map((paragraph, idx) => (
-                                    <p key={idx} className="mb-4">{paragraph}</p>
-                                ))}
-                            </div>
-                        </div>
-                    </AccordionItem>
-                );
-            })}
-        </Accordion>
+        <>
+        <div className="flex flex-col w-full gap-y-7">
+            {/* Current Work */}
+            <div className="grid grid-flow-col w-full grid-cols-[1fr_4fr] ">
+                <div className="flex w-full px-2 md: justify-center">
+                    <Avatar
+                        isBordered
+                        className="flex w-full h-fit min-w-[50px] max-w-[150px]"
+                        color="secondary"
+                        radius="lg"
+                        src="/image/pfp.jpg/"
+                    />
+                </div>
+                <div className="text-left flex w-full flex-col pl-2">
+                    <span className="word-wrap text-2xl font-bold leading-tight md:text-4xl"><Gradient>Software Developer and Consultant</Gradient></span>
+                    <strong className="text-md text-secondary md:text-2xl">Current <br/>👶 - 2024</strong>
+                    <span className="text-primary-foreground text-sm md:text-xl">
+                        <p>
+                            {`I have always had a passion for code, At 11 years old I was building my first HTML website using notepad! 🗒️`}
+                        </p><br/>
+                        <p>
+                            {`In late 2024 I wanted to rekindle my passion and bring myself back to my first true love!`}</p><br/>
+                        <p>
+                            {`Since then, I have been learning and building full stack applications using`} 
+                        </p><br/>
+                        <p className="italic font-bold leading-snug">{`TypeScript, JavaScript, Python, SQL, PHP, HTML and CSS`}</p><br/>
+                        <p>
+                            {`I build applications to solve, and I build them out of love for the art. `}</p>
+                    </span>
+                </div> 
+            </div>
+            {/* Second Work */}
+            <div className="grid grid-flow-col w-full grid-cols-[1fr_4fr] ">
+                <div className="flex w-full px-2 md: justify-center">
+                    <Avatar
+                        isBordered
+                        className="flex w-full h-fit min-w-[50px] max-w-[150px]"
+                        color="primary"
+                        radius="lg"
+                        src="/image/lenovo_logo.jpeg"
+                    />
+                </div>
+                <div className="text-left flex w-full flex-col pl-1">
+                    <span className="text-3xl font-bold leading-tight md:text-4xl"><Gradient>Lenovo</Gradient></span>
+                    <span className=" text-primary-foreground text-xl font-bold md:text-3xl">Sales Leader</span>
+                    <strong className="text-md text-secondary md:text-2xl">8 Years <br/>2015 - 2024</strong>
+                    <span className="text-primary-foreground text-sm md:text-xl">
+                        <p>
+                            {`As a Services Sales Leader, I led and managed Business Development teams focused on delivering technology solutions to clients across Australia and New Zealand. `}
+                        </p><br/>
+                        <p>
+                            {`I specialized in leading a sales team proposing Managed Services, Helpdesk, Cloud, and Security solutions. My teams' expertise aligned to modern practices, 
+                            with a proven track record of helping organizations in meeting new standards and obligations.`}
+                        </p><br/>
+                        <p>
+                            {`At the same time as a people manager, I made it my mission to ensure I was supporting my team 
+                            in personal development goals and aspirations.`}
+                        </p><br/>
+                        {`I collaborate and empower the team alongside me in bringing out the best within.`}
+                    </span>
+                </div> 
+            </div>
+            {/* Third Work */}
+            <div className="grid grid-flow-col w-full grid-cols-[1fr_4fr] ">
+                <div className="flex w-full px-2 md: justify-center">
+                    <Avatar
+                        isBordered
+                        className="flex w-full h-fit min-w-[50px] max-w-[150px]"
+                        color="primary"
+                        radius="lg"
+                        src="/image/dell.jpeg"
+                    />
+                </div>
+                <div className="text-left flex w-full flex-col pl-1">
+                    <span className="text-3xl font-bold leading-tight md:text-4xl"><Gradient>Dell</Gradient></span>
+                    <span className=" text-primary-foreground text-xl font-bold md:text-3xl">Technical Advocate</span>
+                    <strong className="text-md text-secondary md:text-2xl">3 Years <br/>2013 - 2015</strong>
+                    <span className="text-primary-foreground text-sm md:text-xl">
+                        <p>
+                        {`As a Technology Advocate, I led strategic initiatives driving modern technology adoption across large clients in Australia and New Zealand`}
+                        </p><br/>
+                        <p>
+                        {`
+                        I focused on architecting and implementing virtualization solutions, notably securing one of Asia Pacific's largest VMware deployments 
+                        that modernized client infrastructure and improved operational efficiency by 40%.`}
+                        </p><br/> 
+                        <p>
+                        {`I'm passionate about enabling organizations to adopt, modernize and scale with a high level of attention to detail.`}
+                        </p>
+                    </span>
+                </div> 
+            </div>
+        </div>
+        </>
     );
 }
