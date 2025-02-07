@@ -48,7 +48,7 @@ function Connect() {
             <Card className="flex flex-col p-4 bg-background shadow-none ">
                 <CardHeader>
                     <h1 className="flex w-full h-auto justify-center text-[7vh]">
-                        <Gradient>Contact Me</Gradient>✉️
+                        <Gradient>Contact</Gradient>✉️
                     </h1>
                 </CardHeader>
                 <CardBody className="flex w-full h-auto items-center gap-4 text-[4vh]">
