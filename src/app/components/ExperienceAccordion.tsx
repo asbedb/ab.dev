@@ -19,7 +19,7 @@ export default function App() {
                 </div>
                 <div className="text-left flex w-full flex-col pl-2">
                     <span className="word-wrap text-2xl font-bold leading-tight md:text-4xl"><Gradient>Software Developer and Consultant</Gradient></span>
-                    <strong className="text-md text-secondary md:text-2xl">Current <br/>👶 - 2024</strong>
+                    <strong className="text-xl text-secondary md:text-2xl">👶 - Present</strong>
                     <span className="text-primary-foreground text-sm md:text-xl">
                         <p>
                             {`I have always had a passion for code, At 11 years old I was building my first HTML website using notepad! 🗒️`}
