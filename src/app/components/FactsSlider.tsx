@@ -4,7 +4,7 @@ import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import { useSwipeable } from "react-swipeable";
 import { motion, AnimatePresence } from "framer-motion";
 import Gradient from "./Gradient";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const staticFrontPage = {
     about: {
@@ -67,7 +67,7 @@ const FactsSlider: React.FC<ShowCaseSliderProps> = ({ onProjectChange }) => {
                 initial={{ opacity: 0, rotateY: index % 2 === 0 ? 90 : -90 }}
                 animate={{ opacity: 1, rotateY: 0 }}
                 exit={{ opacity: 0, rotateY: index % 2 === 0 ? 90 : -90 }}
-                transition={{ duration: 0.4, ease: "easeOut" }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
                 {...swipeHandlers}
             >
                 <Card className="w-full bg-primary-100 text-primary-foreground md:min-h-[620px] md:max-h-[620px] hover:cursor-grabbing select-none">
@@ -86,7 +86,7 @@ const FactsSlider: React.FC<ShowCaseSliderProps> = ({ onProjectChange }) => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
-                                <ArrowLeft className="text-white w-8 h-8" />
+                                <FaArrowLeft className="text-white w-8 h-8" />
                             </motion.button>
                             <motion.button
                                 onClick={nextCard}
@@ -94,7 +94,7 @@ const FactsSlider: React.FC<ShowCaseSliderProps> = ({ onProjectChange }) => {
                                 whileHover={{ scale: 1.1 }}
                                 whileTap={{ scale: 0.9 }}
                             >
-                                <ArrowRight className="text-white w-8 h-8" />
+                                <FaArrowRight className="text-white w-8 h-8" />
                             </motion.button>
                             {currentSlide.emoji}
                         </div>

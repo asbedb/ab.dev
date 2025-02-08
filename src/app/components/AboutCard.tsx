@@ -40,8 +40,8 @@ export default function AboutCard(){
                         </h3>
                         <h5 className="text-xl font-semibold tracking-tight">@asbedb</h5>
                         <strong className="text-medium">🌏 Melbourne, Australia</strong><br/>
-                            <div className="text-lg text-secondary-50 leading-loose px-2 rounded-xl text-center mt-2 z-10">
-                                Full Stack Developer
+                            <div className="text-lg  leading-loose px-2 rounded-xl text-center mt-2 z-10 font-bold">
+                                <Gradient>Full Stack Developer</Gradient>
                             </div><br/>Bringing a wealth of knowledge and maturity across multiple disciplines.
                     </div> 
                 </div>   

@@ -22,16 +22,14 @@ export default function App() {
                     <strong className="text-xl text-secondary md:text-2xl">👶 - Present</strong>
                     <span className="text-primary-foreground text-sm md:text-xl">
                         <p>
-                            {`I have always had a passion for code, At 11 years old I was building my first HTML website using notepad! 🗒️`}
+                            {`I have always had a passion for code. At 11 years old, I was building my first HTML website using Notepad! 🗒️`}
                         </p><br/>
                         <p>
-                            {`In late 2024 I wanted to rekindle my passion and bring myself back to my first true love!`}</p><br/>
-                        <p>
-                            {`Since then, I have been learning and building full stack applications using`} 
+                            {`What started as curiosity has turned into a means to level up, learn, and creatively express myself. I've been focused on learning and building full-stack applications, using a variety of languages such as:`} 
                         </p><br/>
                         <p className="italic font-bold leading-snug">{`TypeScript, JavaScript, Python, SQL, PHP, HTML and CSS`}</p><br/>
                         <p>
-                            {`I build applications to solve, and I build them out of love for the art. `}</p>
+                            {`For me, crafting applications isn’t just about solving problems – it's also about the love for the craft itself. Every project is a chance to push my skills further and create something meaningful. `}</p>
                     </span>
                 </div> 
             </div>
@@ -52,17 +50,13 @@ export default function App() {
                     <strong className="text-md text-secondary md:text-2xl">8 Years <br/>2015 - 2024</strong>
                     <span className="text-primary-foreground text-sm md:text-xl">
                         <p>
-                            {`As a Services Sales Leader, I led and managed Business Development teams focused on delivering technology solutions to clients across Australia and New Zealand. `}
+                            {`As a Services Sales Leader, I directed Business Development teams specialising in technology solutions across Australia and New Zealand.`}
                         </p><br/>
                         <p>
-                            {`I specialized in leading a sales team proposing Managed Services, Helpdesk, Cloud, and Security solutions. My teams' expertise aligned to modern practices, 
-                            with a proven track record of helping organizations in meeting new standards and obligations.`}
+                            {` We excelled in delivering Managed Services, Helpdesk, Cloud, and Security solutions, maintaining modern practices and helping organisations meet evolving standards.
+                            `}
                         </p><br/>
-                        <p>
-                            {`At the same time as a people manager, I made it my mission to ensure I was supporting my team 
-                            in personal development goals and aspirations.`}
-                        </p><br/>
-                        {`I collaborate and empower the team alongside me in bringing out the best within.`}
+                        {`I prioritised my team's professional growth while fostering a collaborative environment that empowered each member to reach their full potential.`}
                     </span>
                 </div> 
             </div>
@@ -83,15 +77,13 @@ export default function App() {
                     <strong className="text-md text-secondary md:text-2xl">3 Years <br/>2013 - 2015</strong>
                     <span className="text-primary-foreground text-sm md:text-xl">
                         <p>
-                        {`As a Technology Advocate, I led strategic initiatives driving modern technology adoption across large clients in Australia and New Zealand`}
+                        {`As a Technology Advocate, I spearheaded strategic initiatives to drive modern technology 
+                        adoption across Australia and New Zealand. I architected and implemented virtualisation solutions, 
+                        notably securing Asia Pacific's largest VMware deployment - modernising client infrastructure and boosting operational efficiency by 40%.
+                        `}
                         </p><br/>
                         <p>
-                        {`
-                        I focused on architecting and implementing virtualization solutions, notably securing one of Asia Pacific's largest VMware deployments 
-                        that modernized client infrastructure and improved operational efficiency by 40%.`}
-                        </p><br/> 
-                        <p>
-                        {`I'm passionate about enabling organizations to adopt, modernize and scale with a high level of attention to detail.`}
+                        {`I'm passionate about helping organisations modernise and scale, bringing meticulous attention to every project.`}
                         </p>
                     </span>
                 </div> 
