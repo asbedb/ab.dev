@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardHeader, CardFooter, Button, Chip, CardBody, useDisclosure, } from "@nextui-org/react";
+import { Card, CardHeader, CardFooter, Button, Chip, CardBody } from "@nextui-org/react";
 import { useRef, useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MdOutlineFullscreen,  } from "react-icons/md";
@@ -44,6 +44,7 @@ const projectDetails = {
     }  
 };
 
+
 export default function ProjectCard() {
     const [index, setIndex] = useState(0);
 
@@ -79,14 +80,6 @@ export default function ProjectCard() {
         }
     };
 
-    const handleMobileFullscreen = () => {
-        if (window.innerWidth <= 768) {
-            const videoElement = videoRef.current
-            if(videoElement){
-                (screen.orientation as any).lock("landscape-primary");
-            }
-        }
-    };
 
     const handleExitMobileFullscreen = () => {
         const videoElement = videoRef.current
@@ -210,7 +203,6 @@ export default function ProjectCard() {
                                 disablePictureInPicture
                                 onClick={() => {
                                     handleVideoClick();
-                                    handleMobileFullscreen();
                                 }}
                                 >
                                 
