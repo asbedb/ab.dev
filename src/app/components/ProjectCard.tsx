@@ -10,6 +10,7 @@ const projectDetails = {
     driveShiftSavvy: {
         projectName: "DriveShift Savvy",
         gitHubLink: "https://github.com/asbedb/Drive-ShiftSavvy",
+        demoLink: "https://asbedb.github.io/Drive-ShiftSavvy/",
         projectTechnologies: "Pure Javascript, NodeJS, HTML, CSS",
         projectChallengeStatement: "Empower RideShare drivers to make informed decisions on fuel consumption expenses based on publicly available data.",
         projectDescrption: `DriveShift Savvy provides an intuitive interface to input vehicle details, 
@@ -22,6 +23,7 @@ const projectDetails = {
     siteQL: {
         projectName: "siteQL",
         gitHubLink: "https://github.com/asbedb/siteQL",
+        demoLink: "https://site-ql.vercel.app",
         projectTechnologies: "NextJS, React, TypeScript, SQL, Tailwind, JavaScript, HTML, CSS",
         projectChallengeStatement: "Automate the deployment of CRUD Applications using a SQL Backend with dynamic enviromental variables.",
         projectDescrption: `siteQL is my first major full-stack web application, built using Next.js, 
@@ -31,11 +33,38 @@ const projectDetails = {
         initial user login.`,
         animLink: "/image/projectanims/siteqlanim.webm"
     },
+    OrgaPy: {
+        projectName: "OrgaPy",
+        gitHubLink: "https://github.com/asbedb/OrgaPy",
+        demoLink: "",
+        projectTechnologies: "Python, Windows Filesystem, Linux, macOS, CLI Tools, Automation",
+        projectChallengeStatement: "Using a CLI/Command Line Interface to simplify multiple steps in organising files.",
+        projectDescrption: `OrgaPy is a command-line file organization tool that helps you manage and analyze your files 
+        and directories. It provides basic file system navigation, file analysis, and automatic file sorting capabilities.
+        The tool features
+        Directory navigation and file system exploration, 
+        File system analysis (file count and total size), 
+        Automatic file sorting by extension, and 
+        Cross-platform compatibility (Windows, Linux, and macOS)`,
+        animLink: "/image/projectanims/orgapyanim.webm"
+    },
+    PyPlant: {
+        projectName: "PyPlant (Coming soon!)",
+        gitHubLink: "",
+        demoLink: "",
+        projectTechnologies: "Python",
+        projectChallengeStatement: "Procedurally generate plant properties, climate and growing conditions and observe interactions between properties.",
+        projectDescrption: `This project is a work-in-progress Python-based simulation system for generating and managing fictional plant species in a dynamic environment. 
+        It utilizes enum to classify various biological attributes such as lifespan, root system, water requirements, and pollination type. The simulation includes a 
+        time-scaling mechanism where in-game time progresses significantly faster than real-world time.`,
+        animLink: "/image/projectanims/pyplantanim.webm"
+    },
     bingeBot: {
-        projectName: "BingeBot (Work in progress)",
-        gitHubLink: "#",
+        projectName: "BingeBot (Coming soon!)",
+        gitHubLink: "",
+        demoLink: "",
         projectTechnologies: "Google Gemini, TypeScript, NextJS, API, Python, Flask",
-        projectChallengeStatement: "Help recommend a TV/Show movie based on a series of questions to help determine preferences.",
+        projectChallengeStatement: "Help recommend a TV/Show movie based on a series of questions to help determine preferences. ",
         projectDescrption: `BingeBot is an AI assistant powered by Google Gemini, designed to help you 
         discover your next media experience. Using TMDB's API, it guides users through 
         a questionnaire and generates a prompt for Gemini to recommend the perfect 
@@ -215,23 +244,31 @@ export default function ProjectCard() {
                             <span className="md:text-2xl text-md font-bold text-secondary-400">Challenge Statement: </span>
                             <p className="md:text-xl text-sm italic font-bold ">{currentProject.projectChallengeStatement}</p>
                         </div>
-
                         <div className="text-md">
                             <span className="md:text-2xl text-md font-bold text-secondary-400">Project Description:</span>
                             <p className="md:text-xl text-sm">{currentProject.projectDescrption}</p>
                         </div>
-                        <div>
+                        <div className="flex w-full gap-2 justify-end">
                             <Button
-                            className="text-tiny"
+                            className={`text-md font-bold ${currentProject.gitHubLink? "" : "hidden"}`}
                             color="primary"
                             radius="full"
-                            size="sm"
-                            onClick={() => openLink(currentProject.gitHubLink)}
+                            size="md"
+                            onClick={currentProject.gitHubLink? () => openLink(currentProject.gitHubLink) : () => console.log("coming soon")}
+                            
                             >
                                 GitHub
                             </Button>
+                            <Button
+                            className={`text-md font-bold ${currentProject.demoLink? "" : "hidden"}`}
+                            color="success"
+                            radius="full"
+                            size="md"
+                            onClick={currentProject.demoLink? () => openLink(currentProject.demoLink) : () => console.log("coming soon")}
+                            >
+                                Demo
+                            </Button>
                         </div>
-
                     </CardFooter>
                 </Card>
             </motion.div>
