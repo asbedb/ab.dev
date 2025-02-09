@@ -50,7 +50,7 @@ const projectDetails = {
     },
     PyPlant: {
         projectName: "PyPlant (Coming soon!)",
-        gitHubLink: "",
+        gitHubLink: "https://github.com/asbedb/PyPlant",
         demoLink: "",
         projectTechnologies: "Python",
         projectChallengeStatement: "Procedurally generate plant properties, climate and growing conditions and observe interactions between properties.",
