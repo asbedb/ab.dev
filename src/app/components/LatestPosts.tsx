@@ -1,34 +1,35 @@
 "use client"
 import { Card, CardBody, CardHeader, Spinner, Link} from "@nextui-org/react";
 import { useEffect, useState} from "react";
-import { FaGithubSquare } from "react-icons/fa";
+import { FaGithubSquare, FaMediumM } from "react-icons/fa";
 
-interface Git {
-    name: string;
-    html_url: string;
-    description: string;
-    language: string;
+interface PostTypes{
+    pulledFrom:  string,
+    title: string,
+    link: string,
+    category: string,
+    description: string
+    updated_at: string,
 }
 
 type FetchError = Error | null;
 
 
 export default function LatestPosts(){
-    const [profile, setProfile] = useState<Git[]>([]);
+    const [postContent, setPostContent] = useState<PostTypes[]>([])
     const [error, setError] = useState<FetchError>(null);
 
 
     useEffect(() => {
         async function fetchGit() {
             try {
-                const response = await fetch("../api/gitProfile/");
+                const response = await fetch("/api/gitProfile/");
                 if (!response.ok) {
                     throw new Error(`HTTP ERROR! status: ${response.status}`);
                 }
                 const data = await response.json();
-                setProfile(data);
+                setPostContent(data)
             } catch (err) {
-                // Type assertion to handle unknown error type
                 if (err instanceof Error) {
                     setError(err);
                     console.log(error)
@@ -41,19 +42,18 @@ export default function LatestPosts(){
     }, []);
 
     return(<>                  
-                {profile.length > 0 ? (
-                    profile.map((pid, index) => (
-                        <Link key={index} href={pid.html_url} target="_blank">
-                            <Card className="bg-primary-200 text-primary-foreground h-60 w-full flex-grow hover:cursor-pointer hover:animate-pulse hover:bg-primary-50">
-                                <CardHeader className="flex flex-col items-start align-middle justify-center ">
-                                    <div className="text-lg font-bold flex gap-2 leading-tight content-evenly ">
-                                        <FaGithubSquare className="text-purple-600"/>
-                                        <span className="whitespace-normal truncate line-clamp-1">{pid.name}</span>
-                                    </div>
-                                    <h4 className="font-bold text-xl text-secondary-400">{pid.language || 'None'}</h4>
+                {postContent.length > 0 ? (
+                    postContent.map((post, index) => (
+                        <Link key={index} href={post.link} target="_blank">
+                            <Card className={`bg-primary-200 text-primary-foreground h-60 w-full flex-grow hover:cursor-pointer hover:animate-pulse hover:bg-primary-50`}>
+                                <CardHeader className="flex flex-col items-start align-middle gap-2 content-evenly">
+                                        {post.pulledFrom == "GitHub"? <FaGithubSquare className="text-secondary-400 text-lg md:text-2xl"/> : <FaMediumM className="text-secondary-400 text-lg md:text-2xl"/>}
+                                        <span className="whitespace-normal truncate line-clamp-1 text-xl md:text-3xl"> {post.pulledFrom == "GitHub"? "🖥️": "📰"}{post.title}</span>
+                                        <h4 className="flex font-bold text-md text-secondary-400 break-words">{post.category || 'None'}</h4>
+                                        <h5>{post.updated_at}</h5>
                                 </CardHeader>
                                 <CardBody className="px-2 text-md text-foreground items-center bg-primary-600">
-                                    <p className="text-primary-foreground py-4 px-2 w-full">{pid.description}</p>
+                                    <p className="text-primary-foreground px-2 w-full">{post.description}</p>
                                 </CardBody>
                             </Card>
                         </Link>
