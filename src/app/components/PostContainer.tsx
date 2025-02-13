@@ -14,7 +14,8 @@ const PostContainer: React.FC<PostContainerProps> = ({children}) => {
                             bg-primary-100
                             p-4 
                             rounded-xl
-                            w-full 
+                            w-full
+                            gap-4 
                             ">
                 <div className="text-center text-2xl row-span-1 2xl:col-span-3"><Gradient>Latest Updates</Gradient></div>
                     {children}
