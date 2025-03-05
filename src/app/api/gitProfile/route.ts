@@ -1,8 +1,7 @@
-import { NextResponse } from "next/server"
-import { parseStringPromise } from 'xml2js'
+import { NextResponse } from "next/server";
+import { parseStringPromise } from 'xml2js';
 
-
-interface gitHubReposTypes{
+interface gitHubReposTypes {
     pulledFrom: string;
     name: string;
     html_url: string;
@@ -20,24 +19,24 @@ interface MediumRSSItem {
 }
 
 export async function GET() {
-    const gitHubURL = `https://api.github.com/users/asbedb/repos`
-    const mediumURL = `https://medium.com/feed/@asbedb`
+    const gitHubURL = `https://api.github.com/users/asbedb/repos`;
+    const mediumURL = `https://medium.com/feed/@asbedb`;
     const stripHTMLTags = (html: string) => {
-        return html.replace(/<[^>]*>/g, '')
-    }
-    const truncateToSentences =(text: string, numSetences: number) => {
-        const sentences = text.split(/[.!?]\s/)
-        return sentences.slice(0, numSetences).join('. ') + (sentences.length > numSetences? "....": '')
-    }
-    const formatDate = (dateString : string) => {
-        const date = new Date(dateString)
-        const day = String(date.getDate()).padStart(2, '0')
-        const month = String(date.getMonth() + 1).padStart(2, '0')
-        const year = date.getFullYear()
+        return html.replace(/<[^>]*>/g, '');
+    };
+    const truncateToSentences = (text: string, numSetences: number) => {
+        const sentences = text.split(/[.!?]\s/);
+        return sentences.slice(0, numSetences).join('. ') + (sentences.length > numSetences ? "...." : '');
+    };
+    
+    const formatDate = (dateString: string) => {
+        const date = new Date(dateString);
+        const day = String(date.getDate()).padStart(2, '0');
+        const month = String(date.getMonth() + 1).padStart(2, '0');
+        const year = date.getFullYear();
+        return `${day}/${month}/${year}`;
+    };
 
-        return `${day}/${month}/${year}`
-
-    }
     try {
         const [gitHubResponse, mediumResponse] = await Promise.all([
             fetch(gitHubURL),
@@ -51,44 +50,47 @@ export async function GET() {
         }
         const gitHubData = await gitHubResponse.json();
         const mediumData = await mediumResponse.text(); 
-
         const mediumParsedData = await parseStringPromise(mediumData);
-        
         const gitHubRepos = gitHubData.map(
             (repo: gitHubReposTypes) => ({
-                pulledFrom:  "GitHub",
+                pulledFrom: "GitHub",
                 title: repo.name,
                 link: repo.html_url,
                 category: repo.language,
                 description: repo.description || "No Description Available",
                 updated_at: formatDate(repo.updated_at),
-        }))
-
+            })
+        );
         const mediumPosts = mediumParsedData.rss.channel[0].item.map(
             (item: MediumRSSItem) => ({
-                pulledFrom: "Medum",
+                pulledFrom: "Medium",
                 title: item.title[0] || "Title Not Found",
                 link: item.link[0] || "#",
-                category: item.category
-                ? item.category.join(", ")
-                : "None",
+                category: item.category ? item.category.join(", ") : "None",
                 description: truncateToSentences(
-                    stripHTMLTags(item["content:encoded"][0] || ""),
-                    4
+                    stripHTMLTags(item["content:encoded"][0] || ""), 4
                 ),
                 updated_at: formatDate(item["atom:updated"][0]) || "",
-        }))
-        const combinedData = [...gitHubRepos, ...mediumPosts]
+            })
+        );
+        // Combine both GitHub and Medium data
+        const combinedData = [...gitHubRepos, ...mediumPosts];
+        // Ensure the sorting works by comparing the dates
         combinedData.sort((a, b) => {
-            return new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime();
-        })
+            const dateA = new Date(a.updated_at);
+            const dateB = new Date(b.updated_at);
+            // If the date is invalid, use 0 (epoch) to avoid issues
+            const validDateA = isNaN(dateA.getTime()) ? new Date(0) : dateA;
+            const validDateB = isNaN(dateB.getTime()) ? new Date(0) : dateB;
+            return validDateB.getTime() - validDateA.getTime();
+        });
         return NextResponse.json(combinedData);
-    
+
     } catch (error) {
         if (error instanceof Error) {
             return NextResponse.json({ error: error.message }, { status: 400 });
         } else {
-            return NextResponse.json({error: 'Unknown Error'}, { status: 400 });
+            return NextResponse.json({ error: 'Unknown Error' }, { status: 400 });
         }
     }
 }
