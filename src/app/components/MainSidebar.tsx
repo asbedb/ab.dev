@@ -48,7 +48,7 @@ const MainSidebar: React.FC<SideBarProps> = ({ mainContentTarget }) => {
             <button
                 className={isOpen ? `absolute top-4 left-64 -translate-x-full z-50 md:hidden 
                                     bg-primary-600 text-secondary-50 p-3 
-                                    rounded-full hover:bg-primary-500` : `absolute top-4 left-4 z-40 md:hidden 
+                                    rounded-full hover:bg-primary-500` : `absolute top-8 left-8 z-40 md:hidden 
                                     bg-primary-600 text-secondary-50 p-3 
                                     rounded-full hover:bg-primary-500`}
                 onClick={() => setIsOpen(!isOpen)}
@@ -74,7 +74,7 @@ const MainSidebar: React.FC<SideBarProps> = ({ mainContentTarget }) => {
                     <SidebarLinkText link="career" text="Career" icon={<FaSuitcase className="text-secondary-50 text-2xl md:text-3xl" />} />
                     <SidebarLinkText link="projects" text="Projects" icon={<FaFolder className="text-secondary-50 text-2xl md:text-3xl" />} />
                     <SidebarLinkText link="connect" text="Connect" icon={<FaEnvelope className="text-secondary-50 text-2xl md:text-3xl" />} />
-                    <SidebarLinkText link="updates" text="Updates" icon={<FaRssSquare className="text-secondary-50 text-2xl md:text-3xl" />} />
+                    <SidebarLinkText link="#" domainLink="https://docs.asbedb.com" text="Updates" icon={<FaRssSquare className="text-secondary-50 text-2xl md:text-3xl" />} />
                     <ThemeSwitcher />
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from "react";
 type CodeColorProps = {
-    color: 'lightblue' |'white'|'commentgreen'| 'purple' | 'blue' | 'amber' | 'green' | 'yellow' | 'gray';
+    color: 'lightblue' |'white'|'commentgreen'| 'purple' | 'blue' | 'amber' | 'green' | 'yellow' | 'gray' | 'lightamber';
     children: React.ReactNode;
 };
 const CodeColor: React.FC<CodeColorProps> = ({ color, children }) => {
@@ -11,6 +11,7 @@ const CodeColor: React.FC<CodeColorProps> = ({ color, children }) => {
         purple: 'text-purple-400',
         blue: 'text-blue-400',
         amber: 'text-amber-600',
+        lightamber: 'text-amber-400',
         green: 'text-green-500',
         yellow: 'text-yellow-300',
         gray: 'text-gray-500',

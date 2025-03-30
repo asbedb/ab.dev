@@ -57,7 +57,7 @@ const ThemeSwitcher = () => {
                                     ">
                                 <FaPaintbrush className="text-secondary-50 text-2xl md:text-3xl" />
                             </div>
-                            <div className='hidden md:flex items-center leading-snug font-bold'>Theme</div>
+                            <div className='flex items-center font-bold'>Theme</div>
                         </div>
                     </PopoverTrigger>
                     <PopoverContent>

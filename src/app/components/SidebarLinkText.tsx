@@ -4,21 +4,22 @@ interface SidebarLinkProps{
     link: string,
     text: string,
     icon: string | ReactNode
+    domainLink?: string,
 }
-const SidebarLinkText:  React.FC<SidebarLinkProps> = ({link, text, icon}) =>  {
+const SidebarLinkText:  React.FC<SidebarLinkProps> = ({link, text, icon, domainLink}) =>  {
 
         const handleScrollToElement = (elementId: string) => {
             const element = document.getElementById(elementId);
             if (element) {
             element.scrollIntoView({
-                behavior: "smooth",  // Smooth scroll
-                block: "start",      // Aligns to the top of the viewport
+                behavior: "smooth",  
+                block: "start",      
             });
             }
         };
         
         return (
-            <a onClick={() => handleScrollToElement(link)} className='w-full'>
+            <a onClick={() => handleScrollToElement(link)} className='w-full' href={domainLink ? domainLink : "#"} target={domainLink? 'blank' : ''}>
                 <div className='flex flex-row 
                                 rounded-3xl
                                 md:bg-primary-300 
